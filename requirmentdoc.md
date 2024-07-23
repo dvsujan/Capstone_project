@@ -18,7 +18,7 @@ This document outlines the requirements for a coffee shop application, including
 #### 2.1.2 Menu Browsing
 - Users should be able to browse a menu of available coffee options.
 - Each coffee item must display details such as name, description, price, and available customization options.
-
+    
 #### 2.1.3 Coffee Customization
 - Users should be able to select a coffee and customize it (e.g., number of milk pumps, type of milk, sugar level).
 - The system should display available customization options and update the price based on user selections.
