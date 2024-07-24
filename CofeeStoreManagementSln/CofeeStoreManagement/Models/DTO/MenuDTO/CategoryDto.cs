@@ -3,7 +3,7 @@
     public class CategoryDto
     {
         public string Name { get; set; }
-        public ProductDataDto Data { get; set; }
+        public List<ProductDataDto> Children { get; set; }
 
     }
 }

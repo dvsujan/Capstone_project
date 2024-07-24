@@ -56,6 +56,7 @@ namespace CofeeStoreManagement.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
+        
         /// <summary>
         /// Register a new user
         /// </summary>
