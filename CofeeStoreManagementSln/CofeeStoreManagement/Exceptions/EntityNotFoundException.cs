@@ -1,7 +1,7 @@
 ﻿namespace CofeeStoreManagement.Exceptions
 {
     [Serializable]
-    internal class EntityNotFoundException : Exception
+    public class EntityNotFoundException : Exception
     {
         public EntityNotFoundException()
         {
