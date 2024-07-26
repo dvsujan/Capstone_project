@@ -19,7 +19,8 @@ namespace CofeeStoreManagement.services
         private readonly IRepository<int, ProductOption> _productOptionRepository;
         private readonly IRepository<int, ProductOptionValue> _productOptionValueRepository;
         private readonly IRepository<int, Order> _orderRepository;
-        private readonly IRepository<int, Store> _storeRepository; 
+        private readonly IRepository<int, Store> _storeRepository;
+        private readonly IRepository<int, OrderItem> _orderItemRepository; 
 
         public CartService(
             IRepository<int, Cart> cartRepository,
@@ -29,7 +30,8 @@ namespace CofeeStoreManagement.services
             IRepository<int, ProductOption> productOptionRepository,
             IRepository<int, ProductOptionValue> productOptionValueRepository,
             IRepository<int, Order> orderRepository,
-            IRepository<int, Store> storeRepository)
+            IRepository<int, Store> storeRepository,
+            IRepository<int, OrderItem> orderItemRepository)
         {
             _cartRepository = cartRepository;
             _cartItemRepository = cartItemRepository;
@@ -39,6 +41,7 @@ namespace CofeeStoreManagement.services
             _productOptionValueRepository = productOptionValueRepository;
             _orderRepository = orderRepository;
             _storeRepository = storeRepository;
+            _orderItemRepository = orderItemRepository;
         }
 
         private async Task<bool> CheckIfValidUser(int userId)
@@ -57,9 +60,8 @@ namespace CofeeStoreManagement.services
                 throw; 
             } 
             
-        } 
-
-        public async Task<bool> CheckIfValidProduct(int productId)
+        }
+         private async Task<bool> CheckIfValidProduct(int productId)
         {
             try
             {
@@ -68,7 +70,25 @@ namespace CofeeStoreManagement.services
             }
             catch (EntityNotFoundException)
             {
-                throw new ProductDoesNotExistException();
+                throw new ProductDoesNotExistException(); 
+            }
+            catch
+            {
+                throw; 
+            } 
+            
+        }
+
+
+        public async Task<bool> CheckIfValidStore(int storeId){
+            try
+            {   
+                var store = await _storeRepository.GetOneById(storeId);  
+                return true;
+            }
+            catch (EntityNotFoundException)
+            {
+                throw new StoreDoesNotExistException();
             }
             catch
             {
@@ -76,11 +96,14 @@ namespace CofeeStoreManagement.services
             }
         }
 
+          
+
         public async Task<CartReturnDto> AddItemToCart(CartDto dto)
         {
             try
             {
-                await CheckIfValidUser(dto.UserId); 
+                await CheckIfValidUser(dto.UserId);  
+                await CheckIfValidProduct(dto.ProductId);
 
                 var carts = await _cartRepository.Get();
                 var cart = carts.FirstOrDefault(c => c.UserId == dto.UserId);
@@ -128,12 +151,39 @@ namespace CofeeStoreManagement.services
                 throw; 
             }
         }
-        
+        private async Task ClearCart(int userId)
+        {
+            try
+            {
+                var carts = await _cartRepository.Get();
+                var cart = carts.FirstOrDefault(c => c.UserId == userId);
+
+                if (cart != null)
+                {
+                    var cartItems = await _cartItemRepository.Get();
+                    var itemsToDelete = cartItems.Where(ci => ci.CartId == cart.CartId).ToList();
+
+                    foreach (var item in itemsToDelete)
+                    {
+                        await _cartItemRepository.Delete(item.CartItemId);
+                    }
+                }
+            } 
+            catch
+            {
+                throw; 
+            }
+
+            
+        }
+
+
         public async Task<CheckoutReturnDto> Checkout(CheckoutDto dto)
         {
             try
             {
-                await CheckIfValidUser(dto.UserId); 
+                await CheckIfValidUser(dto.UserId);
+                await CheckIfValidStore(dto.StoreId); 
                 
                 var carts = await _cartRepository.Get(); 
 
@@ -147,7 +197,7 @@ namespace CofeeStoreManagement.services
                 var order = new Order
                 {
                     UserId = dto.UserId,
-                    StoreId = 1,
+                    StoreId = dto.StoreId,
                     TotalAmount = 0,
                     Status = "Pending",
                     CreatedAt = DateTime.UtcNow,
@@ -155,10 +205,16 @@ namespace CofeeStoreManagement.services
                 };
 
                 var orderItems = new List<OrderItem>();
-                var cartItems = await _cartItemRepository.Get();
-                decimal discount = 0; 
+                var cartItems = await _cartItemRepository.Get();  
 
-                foreach (var cartItem in cartItems.Where(ci => ci.CartId == cart.CartId))
+                decimal discount = 0;
+                var userItems = cartItems.Where(ci => ci.CartId == cart.CartId).ToList();  
+                if (userItems.Count == 0)
+                {
+                    throw new CartEmptyException(); 
+                }
+
+                foreach (var cartItem in userItems) 
                 {
                     var product = await _productRepository.GetOneById(cartItem.ProductId);
                     
@@ -194,22 +250,15 @@ namespace CofeeStoreManagement.services
                     orderItems.Add(orderItem);
                 }
 
-                // Insert the order into the repository
-                    // UNCOMMENT
-                //var resOrder = await _orderRepository.Insert(order);
+                var resOrder = await _orderRepository.Insert(order);
 
-                // Insert order items into the repository
                 foreach (var orderItem in orderItems)
                 {
-                    // UNCOMMENT
-                    //orderItem.OrderId = resOrder.OrderId; 
-
-                    //await _orderItemRepository.Insert(orderItem);
+                    orderItem.OrderId = resOrder.OrderId;
+                    await _orderItemRepository.Insert(orderItem);
                 }
-
-                // Clear the cart after successful checkout
-                    // UNCOMMENT
-                //await ClearCart(dto.UserId);
+                
+                await ClearCart(dto.UserId);
 
                 return new CheckoutReturnDto
                 {
@@ -222,8 +271,6 @@ namespace CofeeStoreManagement.services
             {
                 throw;
             }
-
-
         }
 
         public async Task<CartReturnDto> DeleteItemFromCart(int userId , int productId)
@@ -263,8 +310,6 @@ namespace CofeeStoreManagement.services
             {
                 throw; 
             }
-            
-
         }
         
         public async Task<IEnumerable<CartItemDto>> GetAllItemsInCart(int userId)

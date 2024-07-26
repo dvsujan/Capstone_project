@@ -5,11 +5,11 @@ namespace CofeeStoreManagement.Interfaces
 {
     public interface IStoreService
     {
-        public Task<IEnumerable<OrderReturnDto>> GetStoreOrders(string storeId);
-        public Task<AcceptOrderReturnDTO> AcceptOrder(int orderid);
-        public Task<DeclineOrderReturnDto> DeclineOrder(int OrderId);
-        public Task<ReadyOrderReturnDto> MakeOrderReady(int ordreId); 
-        public Task<ReturnStoreinfoDto> GetStoresByCity(string city); 
+        public Task<IEnumerable<OrderReturnDto>> GetStoreOrders(int storeId);
+        public Task<ModifyOrderReturnDTO> AcceptOrder(int orderid);
+        public Task<ModifyOrderReturnDTO> DeclineOrder(int OrderId);
+        public Task<ModifyOrderReturnDTO> MakeOrderReady(int ordreId); 
+        public Task<IEnumerable<ReturnStoreinfoDto>> GetStoresByCity(string city); 
 
     }
 }

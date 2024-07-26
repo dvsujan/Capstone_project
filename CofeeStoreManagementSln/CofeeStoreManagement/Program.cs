@@ -65,7 +65,8 @@ namespace CofeeStoreManagement
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IMenuService, MenuService>(); 
             builder.Services.AddScoped<IProductService, ProductService>(); 
-            builder.Services.AddScoped<ICartService, CartService>(); 
+            builder.Services.AddScoped<ICartService, CartService>();
+            builder.Services.AddScoped<IStoreService, StoreService>(); 
 
             #endregion
 
