@@ -1,4 +1,5 @@
-﻿using CofeeStoreManagement.Models.DTO.StoreDTO;
+﻿using CofeeStoreManagement.Models.DTO.OrderDTO;
+using CofeeStoreManagement.Models.DTO.StoreDTO;
 
 namespace CofeeStoreManagement.Interfaces
 {

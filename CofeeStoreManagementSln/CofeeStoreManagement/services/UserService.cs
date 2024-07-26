@@ -12,10 +12,12 @@ namespace CofeeStoreManagement.services
     {
         private readonly IRepository<int, User> _userRepository;
         private readonly ITokenService _tokenService;
-        public UserService(IRepository<int, User> userRepository, ITokenService tokenService)
+        private readonly IRepository<int, Cart> _cartRepository; 
+        public UserService(IRepository<int, User> userRepository, ITokenService tokenService, IRepository<int , Cart> cartRepository)
         {
             _userRepository = userRepository;
             _tokenService = tokenService;
+            _cartRepository = cartRepository; 
         }
         
         public  async Task<LoginReturnDto> Login(UserLoginDTO dto)
@@ -45,7 +47,6 @@ namespace CofeeStoreManagement.services
             {
                 throw; 
             }
-
         }
         /// <summary>
         /// used to check if password entered is correct
@@ -87,10 +88,18 @@ namespace CofeeStoreManagement.services
         {
             await _userRepository.Delete(id);
         }
-        
+
+        /// <summary>
+        /// registers a new user to the database   
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        /// <exception cref="EntityNotFoundException"></exception>
+        /// <exception cref="UserAlreadyExistsException"></exception>
         public async Task<RegisterReturnDto> Register(UserRegisterDto dto)
         {
             User userReg = null;
+            Cart cartReg = null;  
             try
             {
                 if (await isUserExists(dto.Email))
@@ -106,6 +115,11 @@ namespace CofeeStoreManagement.services
                 userReg.HashKey = hMACSHA.Key;
                 userReg.Password = hMACSHA.ComputeHash(Encoding.UTF8.GetBytes(dto.Password));
                 await _userRepository.Insert(userReg);
+                cartReg = new Cart
+                {
+                    UserId = userReg.Id
+                };
+                await _cartRepository.Insert(cartReg); 
                 return new RegisterReturnDto
                 {
                     Id = userReg.Id,

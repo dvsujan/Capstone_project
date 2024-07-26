@@ -39,10 +39,10 @@ namespace CofeeStoreManagement.services
                 (superCategory, categoryGroup) => new SuperCategoryDto
                 {
                     Name = superCategory.Name,
-                    Children = categoryGroup.Select(category => new CategoryDto
+                    Categories = categoryGroup.Select(category => new CategoryDto
                     {
                         Name = category.Name,
-                        Children = productCategories.Where(pc => pc.CategoryId == category.CategoryId)
+                        Products = productCategories.Where(pc => pc.CategoryId == category.CategoryId)
                             .Join(products,
                                 pc => pc.ProductId,
                                 p => p.ProductId,
@@ -58,8 +58,6 @@ namespace CofeeStoreManagement.services
                     }).ToList()
                 }).ToList()
             };
-
-
             return menu;
         }
     }

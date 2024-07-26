@@ -16,8 +16,7 @@ namespace CofeeStoreManagement
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
+            
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
              .AddJwtBearer(options =>
              {
@@ -65,6 +64,8 @@ namespace CofeeStoreManagement
             builder.Services.AddScoped<ITokenService, TokenService>(); 
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IMenuService, MenuService>(); 
+            builder.Services.AddScoped<IProductService, ProductService>(); 
+            builder.Services.AddScoped<ICartService, CartService>(); 
 
             #endregion
 

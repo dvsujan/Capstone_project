@@ -10,7 +10,6 @@ namespace CofeeStoreManagement.Models
         public int ProductId { get; set; }
         public int Quantity { get; set; }
         public string SelectedOptions { get; set; } 
-        public decimal Price { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public Order Order { get; set; }
