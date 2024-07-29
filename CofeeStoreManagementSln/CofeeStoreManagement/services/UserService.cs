@@ -12,7 +12,7 @@ namespace CofeeStoreManagement.services
     {
         private readonly IRepository<int, User> _userRepository;
         private readonly ITokenService _tokenService;
-        private readonly IRepository<int, Cart> _cartRepository; 
+        private readonly IRepository<int, Cart> _cartRepository;  
         public UserService(IRepository<int, User> userRepository, ITokenService tokenService, IRepository<int , Cart> cartRepository)
         {
             _userRepository = userRepository;
@@ -20,7 +20,7 @@ namespace CofeeStoreManagement.services
             _cartRepository = cartRepository; 
         }
         
-        public  async Task<LoginReturnDto> Login(UserLoginDTO dto)
+        public async Task<LoginReturnDto> Login(UserLoginDTO dto)
         {
             try
             {
@@ -42,7 +42,7 @@ namespace CofeeStoreManagement.services
                 {
                     throw new IncorrectPasswordException();
                 }
-            }
+            }  
             catch
             {
                 throw; 

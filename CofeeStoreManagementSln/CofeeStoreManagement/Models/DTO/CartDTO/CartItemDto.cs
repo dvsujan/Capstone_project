@@ -10,6 +10,7 @@ namespace CofeeStoreManagement.Models.DTO.CartDTO
         public int Calories { get; set; }
         public int Cost { get; set; }
         public string ImageUrl { get; set; }
+        public int Quantity { get; set; }   
         public List<ProductOptionDto> SelectedOptions { get; set; }
     }
 }

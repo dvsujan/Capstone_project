@@ -359,6 +359,7 @@ namespace CofeeStoreManagement.services
                         Calories = product.Calories,
                         Cost = product.StarCost,
                         ImageUrl = product.ImageUri,
+                        Quantity = ci.Quantity ,
                         SelectedOptions = selectedOptionsDtos
                     };
                 }).ToList();

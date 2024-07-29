@@ -52,12 +52,16 @@ namespace CofeeStoreManagement.services
             }
         } 
         
-        public async Task<ModifyOrderReturnDTO> AcceptOrder(int orderid)
+        public async Task<ModifyOrderReturnDTO> AcceptOrder(int orderid, int storeId)
         {
             try
             {
                 await IsValidOrder(orderid); 
-                var order = await _orderRepository.GetOneById(orderid); 
+                var order = await _orderRepository.GetOneById(orderid);  
+                if (order.StoreId != storeId)
+                {
+                    throw new OrderNotFoundException();
+                }
                 order.Status = "Accepted";  
                 await _orderRepository.Update(order); 
                 return new ModifyOrderReturnDTO{
@@ -66,19 +70,23 @@ namespace CofeeStoreManagement.services
                     TotalAmount = order.TotalAmount  , 
                     UpdatedStatus = order.Status 
                 }; 
-            } 
+            }  
             catch
             {
                 throw; 
             }
         }
 
-        public async Task<ModifyOrderReturnDTO> DeclineOrder(int OrderId)
+        public async Task<ModifyOrderReturnDTO> DeclineOrder(int OrderId, int storeId)
         {
             try
             { 
                 await IsValidOrder(OrderId); 
                 var order = await _orderRepository.GetOneById(OrderId);  
+                if (order.StoreId != storeId)
+                {
+                    throw new OrderNotFoundException();
+                }
                 order.Status = "Declined";   
                 order = await _orderRepository.Update(order);
                 return new ModifyOrderReturnDTO
@@ -147,7 +155,7 @@ namespace CofeeStoreManagement.services
         {
             var selectedOptionIds = JsonSerializer.Deserialize<List<int>>(selectedOptionsJson);
             var selectedOptions = new List<OrderItemOptionDto>();
-
+            
             foreach (var optionId in selectedOptionIds)
             {
                 var optionValue = await _productOptionValueRepository.GetOneById(optionId);
@@ -168,8 +176,6 @@ namespace CofeeStoreManagement.services
 
         public async Task<IEnumerable<OrderReturnDto>> GetStoreOrders(int storeId)
         {
-            //var orders = await _orderRepository.Get();
-            //var userOrders = orders.Where(x=>x.StoreId == storeId).ToList();
             var userOrders = await ((OrderRepository)_orderRepository).GetAllValidOrdersByStore(storeId); 
             
             var orderDtos = new List<OrderReturnDto>();
@@ -204,13 +210,14 @@ namespace CofeeStoreManagement.services
                 throw; 
             }
         }
-
-        public async Task<ModifyOrderReturnDTO> MakeOrderReady(int ordreId)
+        
+        public async Task<ModifyOrderReturnDTO> MakeOrderReady(int ordreId, int storeId)
         {
             try
             {   
                 await IsValidOrder(ordreId);
-                var order = await _orderRepository.GetOneById(ordreId); 
+                var order = await _orderRepository.GetOneById(ordreId);  
+                if (order.StoreId != storeId) throw new ForbiddenStoreException();
                 if (order.Status != "Accepted") throw new InvalidOrderStatusException();
                 order.Status = "Ready";  
                 await _orderRepository.Update(order); 

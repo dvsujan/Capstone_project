@@ -3,6 +3,7 @@ using CofeeStoreManagement.Interfaces;
 using CofeeStoreManagement.Models.DTO;
 using CofeeStoreManagement.Models.DTO.CartDTO;
 using CofeeStoreManagement.Models.DTO.CheckoutDTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
@@ -20,8 +21,18 @@ namespace CofeeStoreManagement.Controllers
         }
         [HttpPost]
         [Route("Add")]
+        [Authorize]
         public async Task<ActionResult<CartReturnDto>> AddItemToCart(CartDto cartDto)
         {
+            var userIdLogged = int.Parse(User.FindFirst("UserId").Value);
+            if (userIdLogged != cartDto.UserId)
+            { 
+                return StatusCode(StatusCodes.Status403Forbidden,new ErrorDTO
+                {
+                    Message= "forbidden User"
+                });
+            }
+
             try
             {
                 var result = await _cartService.AddItemToCart(cartDto);
@@ -36,8 +47,18 @@ namespace CofeeStoreManagement.Controllers
             }
         }
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<CartReturnDto>>> GetCartItems(int userId)
         {
+            var userIdLogged = int.Parse(User.FindFirst("UserId").Value);
+            if (userIdLogged != userId)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden, new ErrorDTO
+                { 
+                    Message="Forbidden User"
+
+                }); 
+            }
             try
             {
                 var result = await _cartService.GetAllItemsInCart(userId);
@@ -58,9 +79,19 @@ namespace CofeeStoreManagement.Controllers
                 });
             }
         }
+        
         [HttpDelete]
+        [Authorize]
         public async Task<ActionResult<CartReturnDto>> RemoveItemFromCart(int userId, int productId)
         {
+            var userIdLogged = int.Parse(User.FindFirst("UserId").Value);
+            if (userIdLogged != userId)
+            { 
+                return StatusCode(StatusCodes.Status403Forbidden, new ErrorDTO
+                {
+                    Message = "Forbidden User"
+                });
+            }
             try
             {
                 var result = await _cartService.DeleteItemFromCart(userId , productId);
@@ -74,10 +105,20 @@ namespace CofeeStoreManagement.Controllers
                 });
             }
         }
+
         [HttpPost]
         [Route("checkout")]  
+        [Authorize]
         public async Task<ActionResult<CheckoutReturnDto>> Checkout(CheckoutDto dto)
         {
+            var userIdLogged = int.Parse(User.FindFirst("UserId").Value);
+            if (userIdLogged != dto.UserId)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden, new ErrorDTO
+                {
+                    Message = "Forbidden User"
+                });
+            } 
             try
             {
                 var result = await _cartService.Checkout(dto);

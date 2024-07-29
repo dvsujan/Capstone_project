@@ -26,15 +26,15 @@ namespace CofeeStoreManagement.services
             string token = string.Empty;
             var claims = new List<Claim>(){
                 new Claim("EmployeeId",employee.EmployeeId.ToString()),
-                new Claim("StoreId", employee.StoreId.ToString())
+                new Claim("StoreId", employee.StoreId.ToString()) ,
+                new Claim(ClaimTypes.Role, "Employee")
             };
             var credentials = new SigningCredentials(_key, SecurityAlgorithms.HmacSha256);
             var myToken = new JwtSecurityToken(null, null, claims, expires: DateTime.Now.AddDays(7), signingCredentials: credentials);
             token = new JwtSecurityTokenHandler().WriteToken(myToken);
             return token;
-
         }
-
+        
         /// <summary>
         /// Geerates 
         /// </summary>

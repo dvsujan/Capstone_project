@@ -7,6 +7,7 @@ using CofeeStoreManagement.services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Text;
 
 namespace CofeeStoreManagement
@@ -32,7 +33,32 @@ namespace CofeeStoreManagement
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(option =>
+            {
+                option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 1safsfsdfdfd\"",
+                });
+                option.AddSecurityRequirement(new OpenApiSecurityRequirement
+            {
+                {
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        }
+                    },
+                    new string[] { }
+                }
+            });
+            });
             #region database_connection
             builder.Services.AddDbContext<CofeeStoreManagementContext>(options =>
             {
@@ -66,8 +92,8 @@ namespace CofeeStoreManagement
             builder.Services.AddScoped<IMenuService, MenuService>(); 
             builder.Services.AddScoped<IProductService, ProductService>(); 
             builder.Services.AddScoped<ICartService, CartService>();
-            builder.Services.AddScoped<IStoreService, StoreService>(); 
-
+            builder.Services.AddScoped<IStoreService, StoreService>();  
+            builder.Services.AddScoped<IEmployeeService, EmployeeService>();   
             #endregion
 
 
@@ -91,6 +117,9 @@ namespace CofeeStoreManagement
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCors("MyCors");
+
 
             app.UseAuthorization();
 

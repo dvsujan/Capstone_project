@@ -6,6 +6,5 @@ namespace CofeeStoreManagement.Interfaces
     {
         public Task<EmployeeLoginReturnDto> Login(EmployeeLoginDto dto);
         public Task<EmployeeRegisterReturnDto> Register(EmployeeRegisterDto dto); 
-
     }
 }
