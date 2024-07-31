@@ -40,7 +40,7 @@ const EmoloyeeLogin = () => {
   return (
     <div className="login-page">
       <div className="signin-container">
-        <h1>Sign In to Planetbucks</h1>
+        <h1>Employee Login</h1>
         <form>
           <input
             type="text"
@@ -59,7 +59,6 @@ const EmoloyeeLogin = () => {
             ref={passwordRef}
           />
           <button onClick={handleLogin}>Sign In</button>
-          <a href="#">New? Join Here</a>
         </form>
       </div> 
       <Toaster/>

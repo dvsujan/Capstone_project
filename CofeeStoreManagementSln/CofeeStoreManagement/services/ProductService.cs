@@ -3,6 +3,7 @@ using CofeeStoreManagement.Interfaces;
 using CofeeStoreManagement.Models;
 using CofeeStoreManagement.Models.DTO.MenuDTO;
 using CofeeStoreManagement.Models.DTO.ProductDTO;
+using Microsoft.Identity.Client;
 
 namespace CofeeStoreManagement.services
 {
@@ -31,6 +32,26 @@ namespace CofeeStoreManagement.services
             _productOptionValueRepository = productOptionValueRepository;
         }
 
+        public async Task<IEnumerable<CategoryDataDto>> GetCategories()
+        {
+            try
+            {  
+                var categories = await _categoryRepository.Get(); 
+
+                var categoryDataDtos = categories.Select(c => new CategoryDataDto
+                {
+                    CategoryId = c.CategoryId,
+                    CategoryName = c.Name, 
+                    CategoryDescription = c.Description
+                });
+                return categoryDataDtos;
+            }
+            catch
+            {
+                throw; 
+            }
+        }
+
         public async Task<ProductDataDto> GetProductById(int id)
         {
             try
@@ -46,6 +67,7 @@ namespace CofeeStoreManagement.services
                     Name = product.Name,
                     Description = product.Description,
                     Cost = product.StarCost,
+                    Calories= product.Calories,
                     ImageUrl = product.ImageUri
                 };
                 return dto; 

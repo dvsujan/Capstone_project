@@ -7,6 +7,7 @@ namespace CofeeStoreManagement.Interfaces
     {
         public Task<ProductDataDto> GetProductById(int id);
         public Task<IEnumerable<ProductDataDto>> GetTrendingProducts();
-        public Task<ProductWithCategoriesDto> GetProductWithCategories(int id); 
+        public Task<ProductWithCategoriesDto> GetProductWithCategories(int id);
+        public Task<IEnumerable<CategoryDataDto>> GetCategories(); 
     }
 }

@@ -18,6 +18,13 @@ const NavBar = () => {
     }
     else{
       setLoggedIn(false); 
+      const path = (window.location.href.split('/'))[3]; 
+      const exceptPaths = ['login','register','employee', 'menu',''];
+      if(!exceptPaths.includes(path)){
+        window.location.href = '/login';
+      }
+
+
       window.location.href = '/login';
     }
   },[])

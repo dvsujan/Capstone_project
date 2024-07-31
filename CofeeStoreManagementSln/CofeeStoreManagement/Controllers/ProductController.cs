@@ -35,6 +35,26 @@ namespace CofeeStoreManagement.Controllers
                 });  
             }
         }
+
+        [HttpGet]
+        [Route("Categories")]
+        public async Task<ActionResult<IEnumerable<CategoryDataDto>>> GetAllCategories()
+        {
+            try
+            {
+                var res = await _productService.GetCategories();
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorDTO
+                {
+                    Message = ex.Message
+                });
+            }
+        }
+
+
         
         [HttpGet]
         [Route("Options")]

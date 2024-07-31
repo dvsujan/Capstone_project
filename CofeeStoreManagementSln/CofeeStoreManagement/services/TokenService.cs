@@ -51,6 +51,25 @@ namespace CofeeStoreManagement.services
             token = new JwtSecurityTokenHandler().WriteToken(myToken);
             return token;
         }
-    
+        
+        /// <summary>
+        /// generate a token for admin
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public string GenerateAdminToken(string username , string password)
+        {
+            string token = string.Empty;
+            var claims = new List<Claim>(){
+                new Claim("AdminName",username),
+                new Claim(ClaimTypes.Role, "Admin")
+            };
+            var credentials = new SigningCredentials(_key, SecurityAlgorithms.HmacSha256);
+            var myToken = new JwtSecurityToken(null, null, claims, expires: DateTime.Now.AddDays(7), signingCredentials: credentials);
+            token = new JwtSecurityTokenHandler().WriteToken(myToken);
+            return token;
+        }
+
     }
 }

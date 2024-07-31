@@ -35,7 +35,7 @@ const Product = () => {
         toast.error("Error fetching product");
       });
 
-      if (localStorage.getItem("storeData")) {
+      if (localStorage.getItem("storeData")!=null) {
         setUserStore(JSON.parse(localStorage.getItem("storeData")));
       }
   }, []);
@@ -44,6 +44,10 @@ const Product = () => {
     setSelectedOptions({...selectedOptions, [index]: key})
   };  
   const addToCart = ()=>{   
+    if (!userStore){
+        toast.error('Please select a store');
+        return;
+    }
     const selected = Object.values(selectedOptions);
     const filteredSelected = selected.filter(option => option !== "");
     const filteredSelectedInt = filteredSelected.map(option => parseInt(option));
@@ -58,11 +62,14 @@ const Product = () => {
     const config = {
     headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
     };
-
+    
     axios.post('http://localhost:12150/api/Cart/Add', data, config)
     .then(response => { 
         if(response.status === 200){
             toast.success('Item Added to Cart');
+            setTimeout(() => {
+                window.location.href = "/cart";
+            }, 1000);
         }
     })
     .catch(error => {

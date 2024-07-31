@@ -34,7 +34,13 @@ const StorePage = () => {
         toast.error(error.response.data.message);
       });
   };
-  useEffect(() => {
+  useEffect(() => { 
+    const token = localStorage.getItem("emp-token");
+    if (!token) {
+      toast.error("Please Login");
+      window.location.href = "/employee/login";
+    }
+    reFetchOrders();
     const intervalId = setInterval(reFetchOrders, 5000);
 
     return () => clearInterval(intervalId);

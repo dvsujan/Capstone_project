@@ -51,7 +51,7 @@ namespace CofeeStoreManagement.services
 
             }
         }
-
+        
         public async Task<ModifyOrderReturnDTO> AcceptOrder(int orderid, int storeId)
         {
             try
@@ -77,7 +77,7 @@ namespace CofeeStoreManagement.services
                 throw;
             }
         }
-
+        
         public async Task<ModifyOrderReturnDTO> DeclineOrder(int OrderId, int storeId)
         {
             try

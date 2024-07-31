@@ -10,15 +10,25 @@ import ProductCategory from "../../Components/ProductCategory/ProductCategory";
 const Menu = () => {
   const [menuData, setMenuData] = useState(null);
   useEffect(() => {
-    axios
-      .get("http://localhost:12150/api/Menu")
-      .then((res) => {
-        setMenuData(res.data);
-      })
-      .catch((err) => {
-        toast.error("Error in fetching data");
-        console.log(err);
-      });
+    // axios
+    //   .get("http://localhost:12150/api/Menu")
+    //   .then((res) => {
+    //     setMenuData(res.data);
+    //   })
+    //   .catch((err) => {
+    //     toast.error("Error in fetching data");
+    //     console.log(err);
+    //   });
+    toast.promise( 
+        axios.get("http://localhost:12150/api/Menu").then((res) => {
+            setMenuData(res.data);
+          }),
+          {
+            loading: "Loading...",
+            success: "Fetched Menu",
+            error: "Error Fetching Menu",
+          }
+    )
   }, []);
   
   return (

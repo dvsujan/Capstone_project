@@ -56,8 +56,9 @@ const Login = () => {
             placeholder="password"
             required
             ref={passwordRef}
-          />
-          <button onClick={handleLogin}>Sign In</button>
+          /> 
+
+          <button  onClick={handleLogin}>Sign In</button>
           <a href="#">New? Join Here</a>
         </form>
       </div> 
