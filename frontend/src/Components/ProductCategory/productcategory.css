@@ -1,0 +1,21 @@
+.product-category{ 
+    min-width:700px ; 
+    width:100%; 
+    min-height:400px; 
+    margin:50px ;  
+    border-radius: 10px ; 
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, .1); */
+}
+
+.product-category-header{ 
+    display:flex ; 
+    align-items: center;
+    height:100px ; 
+    border-bottom: 2px solid #ccc ; 
+}
+
+.category-products{ 
+    display: flex; 
+    flex-direction: row ;
+    flex-wrap: wrap;
+}

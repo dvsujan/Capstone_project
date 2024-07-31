@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './cartcard.css'
 
 const CartCard = (props) => {  
@@ -19,6 +19,13 @@ const CartCard = (props) => {
     "quantity": 5
   }); 
 
+  useEffect(() => {
+    setCartItem(props.item);
+  }, [props.item]);
+
+  const handleProductRemove=()=> {
+    props.onRemove(cartItem);
+  }
   return (
     <div> 
         <div className="cart-card">
@@ -26,11 +33,18 @@ const CartCard = (props) => {
                 <img src={cartItem.imageUrl} alt="" />
             </div>
             <div className="cart-card-info">
-                <h3>{cartItem.name}</h3>
-                <p>{cartItem.description}</p>
-                <p>Quantity: {cartItem.quantity}</p>
-                <p>Cost: {cartItem.cost}</p>
-                <button>Delete</button>
+                <div className="card-row">
+                    <h3>{cartItem.name}</h3>
+                    <p>₹{cartItem.cost}</p>
+                </div>
+                <p><strong>Quantity: </strong>{cartItem.quantity}</p>
+                <ul>
+                    {cartItem.selectedOptions.map((option, index) => (
+                        <li key={index}>{option.optionName} - <strong>+₹{option.optionCost}</strong></li>
+                    ))}
+                </ul>
+
+                <button onClick={handleProductRemove} >Remove</button>
             </div>
         </div>
 

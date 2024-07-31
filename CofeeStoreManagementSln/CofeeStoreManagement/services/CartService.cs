@@ -217,7 +217,6 @@ namespace CofeeStoreManagement.services
                 foreach (var cartItem in userItems) 
                 {
                     var product = await _productRepository.GetOneById(cartItem.ProductId);
-                    
                     decimal itemPrice = product.StarCost * cartItem.Quantity; 
                     if (cartItem.Quantity >= 2)
                     {
@@ -226,10 +225,10 @@ namespace CofeeStoreManagement.services
                     }
 
                     order.TotalAmount += itemPrice;
-
+                    
                     var selectedOptionValueIds = JsonSerializer.Deserialize<List<int>>(cartItem.SelectedOptions);
                     var additionalCost = 0m;
-
+                    
                     foreach (var optionId in selectedOptionValueIds)
                     {
                         var optionValue = await _productOptionValueRepository.GetOneById(optionId);
@@ -257,9 +256,9 @@ namespace CofeeStoreManagement.services
                     orderItem.OrderId = resOrder.OrderId;
                     await _orderItemRepository.Insert(orderItem);
                 }
-                
-                await ClearCart(dto.UserId);
 
+                await ClearCart(dto.UserId);
+                
                 return new CheckoutReturnDto
                 {
                     FinalPrice = order.TotalAmount,
@@ -272,7 +271,7 @@ namespace CofeeStoreManagement.services
                 throw;
             }
         }
-
+        
         public async Task<CartReturnDto> DeleteItemFromCart(int userId , int productId)
         {
             try

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './store.css';
 import axios from 'axios';  
 import StoreComponent from '../../Components/StoreComponent/StoreComponent';
+import toast , { Toaster } from 'react-hot-toast';
 
 
 const Store = () => { 
@@ -16,6 +17,7 @@ const Store = () => {
                 setStoresData(res.data);
             }).catch((err)=>{
                 console.log(err);
+                toast.error("Error in fetching Stores");
             })
         })
         .catch((err)=>{
@@ -31,6 +33,7 @@ const Store = () => {
             }
         }).catch((err)=>{
             console.log(err);
+            toast.error("Error in fetching Stores");
         })
     } , [userCity])
 
@@ -47,6 +50,7 @@ const Store = () => {
         </div>
         <div className="store-right" id="map"> 
         </div>
+        <Toaster/>
     </div>
   )
 }

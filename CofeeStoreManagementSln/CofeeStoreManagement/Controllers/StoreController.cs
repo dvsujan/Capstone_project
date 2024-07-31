@@ -65,7 +65,34 @@ namespace CofeeStoreManagement.Controllers
                     Message = ex.Message,
                 });
             }
-        } 
+        }
+
+        [HttpGet]
+        [Route("userorders")]
+        [Authorize]
+        public async Task<ActionResult<IEnumerable<OrderReturnDto>>> GetOrdersByUser(int userId , int storeId)
+        {
+            int userLoggedin = int.Parse(User.FindFirst("UserId").Value);
+            if (userLoggedin != userId)
+            {
+                return StatusCode(StatusCodes.Status403Forbidden, new ErrorDTO
+                {
+                    Message = "Forbidden User"
+                });
+            }
+            try
+            {
+                var res = await _storeService.GetUserOrders(userId , storeId );
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorDTO
+                {
+                    Message = ex.Message,
+                });
+            }
+        }
         
         [HttpPost]
         [Route("AcceptOrder")] 

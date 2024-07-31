@@ -1,41 +1,157 @@
-import React, { useEffect, useState } from 'react'
-import './cart.css'
-import CartCard from '../../Components/CartCard/CartCard'
+import React, { useEffect, useState } from "react";
+import "./cart.css";
+import CartCard from "../../Components/CartCard/CartCard";
+import axios from "axios";
+import { parseJwt } from "../../global/Global";
+import toast, { Toaster } from "react-hot-toast";
 
-const Cart = () => { 
-    const [selectedStore , setSelectedStore] = useState(null)
-    const [cart , setCart] = useState([])
-    useEffect(()=>{ 
-        if (localStorage.getItem("storeData")!=null){ 
-            const storeData = JSON.parse(localStorage.getItem("storeData")); 
-            setSelectedStore(storeData); 
-            console.log(selectedStore); 
-        }
-    },[])
-  return ( 
-    <div className='cart-screen'>
-        <div className="cart-left">
-            <div >
+const Cart = () => {
+  const [selectedStore, setSelectedStore] = useState(null);
+  const [cart, setCart] = useState([]); 
+  const [price , setPrice] = useState(0); 
+  const [discout , setDiscount] = useState(0); 
+  const [subTotal , setSubTotal] = useState(0);
 
-                <h1>Review Order</h1>
-                <h4>Ready in Around 4-7 min</h4> 
-                <div className='store-add' onClick={()=>{window.location.href="/store"}}>
-                    {selectedStore?(<>{selectedStore.address}</>):(<>Select Store</>)}
-                </div>
-                <p>PickUp Method</p>
-                <div >
-                    <p>Instore</p>
-                    <p>DriveThru</p>
-                </div>
+  useEffect(() => {
+    if (localStorage.getItem("storeData") != null) {
+      const storeData = JSON.parse(localStorage.getItem("storeData"));
+      setSelectedStore(storeData);
+      console.log(selectedStore);
+    }
+    const headers = {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    };
+    const token = localStorage.getItem("token");
+    const userId = parseInt(parseJwt(token).UserId);
 
-            </div>
+    axios
+      .get(`http://localhost:12150/api/Cart?userId=${userId}`, { headers })
+      .then((response) => {
+        console.log(response.data);
+        setCart(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Error Loading Cart");
+      });
+  }, []); 
+   useEffect(() => {
+    let totalPrice = 0;
+    let totalDiscount = 0; 
+    let totalOptionPrice = 0 ;  
+    let subTotal = 0 ; 
+    cart.forEach((item) => { 
+        subTotal += item.cost * item.quantity;
+        if(item.quantity >= 2){
+            totalPrice += item.cost *item.quantity * .9;
+            totalDiscount += (item.cost *item.quantity) *.1;
+        } 
+        else {
+            totalPrice += item.cost *item.quantity;
+        } 
+        item.selectedOptions.forEach((option) => {
+            totalOptionPrice += option.optionCost*item.quantity;
+        })
+    });
+    setPrice(totalPrice+totalOptionPrice);
+    setDiscount(totalDiscount); 
+    setSubTotal(subTotal+totalOptionPrice);
+  }, [cart]);
 
+  const handleRemove = (cartItem) => {
+    const productId = cartItem.productId;
+    const token = localStorage.getItem("token");
+    const userId = parseInt(parseJwt(token).UserId);
+    const headers = { Authorization: `Bearer ${token}` };
+
+    axios
+      .delete(
+        `http://localhost:12150/api/Cart?userId=${userId}&productId=${productId}`,
+        { headers }
+      )
+      .then((response) => {
+        axios
+          .get(`http://localhost:12150/api/Cart?userId=${userId}`, { headers })
+          .then((response) => {
+            toast.success("Item Removed");
+            setCart(response.data);
+          })
+          .catch((error) => {
+            console.log(error);
+            toast.error("Error Loading Cart");
+          });
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Error Removing Item");
+      });
+  };
+
+  const handleCheckout = () => {
+    if (selectedStore == null) {
+      toast.error("Please Select Store");
+    } else {
+      const token = localStorage.getItem("token");
+      const userId = parseInt(parseJwt(token).UserId);
+      const headers = { Authorization: `Bearer ${token}` };
+      const data = {
+        userId: userId,
+        storeId: selectedStore.storeId,
+      };
+      axios
+        .post("http://localhost:12150/api/Cart/checkout", data, { headers })
+        .then((response) => {
+          console.log(response.data);
+          toast.success("Order Placed");
+        })
+        .catch((error) => {
+          console.log(error);
+          toast.error("Error Placing Order");
+        });
+    }
+  };
+  return (
+    <div className="cart-screen">
+      <div className="cart-left">
+        <div>
+          <h1>Review Order</h1>
+          <h4>Ready in Around 4-7 min</h4>
+          <div
+            className="store-add"
+            onClick={() => {
+              window.location.href = "/store";
+            }}
+          >
+            {selectedStore ? <>{selectedStore.address}</> : <>Select Store</>}
+          </div>
+          <p>PickUp Method</p>
+          <div>
+            <p>Instore</p>
+            <p>DriveThru</p>
+          </div>
         </div>
-        <div className="cart-right">
-            <CartCard/>
+      </div>
+      {cart.length > 0 ?
+      (
+      <div className="cart-right">
+        {cart.map((item) => {
+          return <CartCard item={item} onRemove={handleRemove} />;
+        })}
+        <div className="cart-total">
+          <p><strong>Subtotal</strong> .................................................. <strong>₹{subTotal}</strong> </p>
+          <p><strong>Discount</strong> .................................................. <strong>₹{discout}</strong></p>
+          <p><strong>Total</strong> ..................................................... <strong>₹{price}</strong></p>
         </div>
+      <button className="checkout-btn" onClick={handleCheckout}>Checkout</button>
+      </div>
+      ):(<div className="cart-right">
+        <h1>Cart is Empty</h1>
+        <button className="checkout-btn" onClick={() => {window.location.href = "/menu";}}>Add Items</button>
+      </div>)}
+      <Toaster />
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;

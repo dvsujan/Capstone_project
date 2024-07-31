@@ -18,6 +18,18 @@ namespace CofeeStoreManagement.Repositories
             {
                 throw;
             }
+        } 
+        public async Task<IEnumerable<Order>> GetAllValidOrdersByUser(int userId, int storeId)
+        {
+            try
+            {  
+                var orders = await _dbSet.Where(o => o.UserId == userId && (o.CreatedAt.Date == DateTime.Now.Date)&& o.StoreId == storeId).ToListAsync();
+                return orders;  
+            }
+            catch
+            {
+                throw; 
+            }
         }
     }
 }

@@ -10,96 +10,97 @@ using System.Text.Json;
 
 namespace CofeeStoreManagement.services
 {
-    public class StoreService : IStoreService 
+    public class StoreService : IStoreService
     {
         private readonly IRepository<int, Store> _storeRepository;
         private readonly IRepository<int, Product> _productRepository;
         private readonly IRepository<int, ProductOptionValue> _productOptionValueRepository;
-        private readonly IRepository<int, ProductOption> _productOptionRepository; 
-        private readonly IRepository<int, OrderItem> _orderItemRepository;  
-        private readonly IRepository<int , User> _userRepository;
-        private readonly IRepository<int, Order> _orderRepository; 
+        private readonly IRepository<int, ProductOption> _productOptionRepository;
+        private readonly IRepository<int, OrderItem> _orderItemRepository;
+        private readonly IRepository<int, User> _userRepository;
+        private readonly IRepository<int, Order> _orderRepository;
         public StoreService(IRepository<int, Store> storeRepository,
             IRepository<int, Product> productRepository,
             IRepository<int, ProductOptionValue> productOptionValueRepository,
             IRepository<int, ProductOption> productOptionRepository,
             IRepository<int, OrderItem> orderItemRepository,
-            IRepository<int, User> userRepository  , 
-            IRepository< int, Order> orderReopsitory 
+            IRepository<int, User> userRepository,
+            IRepository<int, Order> orderReopsitory
             )
         {
-            _storeRepository = storeRepository; 
+            _storeRepository = storeRepository;
             _productRepository = productRepository;
             _productOptionValueRepository = productOptionValueRepository;
-            _productOptionRepository = productOptionRepository; 
+            _productOptionRepository = productOptionRepository;
             _orderItemRepository = orderItemRepository;
-            _userRepository = userRepository; 
+            _userRepository = userRepository;
             _orderRepository = orderReopsitory;
         }
 
         public async Task<bool> IsValidOrder(int orderId)
         {
             try
-            { 
-                await _orderRepository.GetOneById(orderId);
-                return true; 
-
-            }
-            catch(EntityNotFoundException)
             {
-                throw new OrderNotFoundException(); 
+                await _orderRepository.GetOneById(orderId);
+                return true;
 
             }
-        } 
-        
+            catch (EntityNotFoundException)
+            {
+                throw new OrderNotFoundException();
+
+            }
+        }
+
         public async Task<ModifyOrderReturnDTO> AcceptOrder(int orderid, int storeId)
         {
             try
             {
-                await IsValidOrder(orderid); 
-                var order = await _orderRepository.GetOneById(orderid);  
+                await IsValidOrder(orderid);
+                var order = await _orderRepository.GetOneById(orderid);
                 if (order.StoreId != storeId)
                 {
                     throw new OrderNotFoundException();
                 }
-                order.Status = "Accepted";  
-                await _orderRepository.Update(order); 
-                return new ModifyOrderReturnDTO{
-                    UserId = order.UserId, 
-                    StoreId = order.StoreId ,  
-                    TotalAmount = order.TotalAmount  , 
-                    UpdatedStatus = order.Status 
-                }; 
-            }  
+                order.Status = "Accepted";
+                await _orderRepository.Update(order);
+                return new ModifyOrderReturnDTO
+                {
+                    UserId = order.UserId,
+                    StoreId = order.StoreId,
+                    TotalAmount = order.TotalAmount,
+                    UpdatedStatus = order.Status
+                };
+            }
             catch
             {
-                throw; 
+                throw;
             }
         }
 
         public async Task<ModifyOrderReturnDTO> DeclineOrder(int OrderId, int storeId)
         {
             try
-            { 
-                await IsValidOrder(OrderId); 
-                var order = await _orderRepository.GetOneById(OrderId);  
+            {
+                await IsValidOrder(OrderId);
+                var order = await _orderRepository.GetOneById(OrderId);
                 if (order.StoreId != storeId)
                 {
                     throw new OrderNotFoundException();
                 }
-                order.Status = "Declined";   
+                order.Status = "Declined";
                 order = await _orderRepository.Update(order);
                 return new ModifyOrderReturnDTO
                 {
                     UserId = order.UserId,
                     StoreId = order.StoreId,
-                    TotalAmount = order.TotalAmount, 
+                    TotalAmount = order.TotalAmount,
                     UpdatedStatus = order.Status
-                }; 
+                };
             }
             catch
             {
-                throw; 
+                throw;
             }
         }
 
@@ -107,12 +108,12 @@ namespace CofeeStoreManagement.services
         {
             var user = await _userRepository.GetOneById(order.UserId);
 
-            var orderDto = new OrderReturnDto 
+            var orderDto = new OrderReturnDto
             {
                 OrderId = order.OrderId,
                 Username = user.Name,
-                OrderAmount = order.TotalAmount, 
-                Status = order.Status, 
+                OrderAmount = order.TotalAmount,
+                Status = order.Status,
                 orderItems = await GetOrderItems(order.OrderId)
             };
 
@@ -131,7 +132,7 @@ namespace CofeeStoreManagement.services
             }
 
             return orderItemDtos;
-        }  
+        }
 
         private async Task<OrderItemDto> CreateOrderItemDto(OrderItem orderItem)
         {
@@ -142,7 +143,7 @@ namespace CofeeStoreManagement.services
                 ProductId = product.ProductId,
                 Name = product.Name,
                 Description = product.Description,
-                Calories = product.Calories,  
+                Calories = product.Calories,
                 Quantity = orderItem.Quantity,
                 ImageUrl = product.ImageUri,
                 SelectedOptions = await GetSelectedOptions(orderItem.SelectedOptions)
@@ -155,7 +156,7 @@ namespace CofeeStoreManagement.services
         {
             var selectedOptionIds = JsonSerializer.Deserialize<List<int>>(selectedOptionsJson);
             var selectedOptions = new List<OrderItemOptionDto>();
-            
+
             foreach (var optionId in selectedOptionIds)
             {
                 var optionValue = await _productOptionValueRepository.GetOneById(optionId);
@@ -172,67 +173,81 @@ namespace CofeeStoreManagement.services
             }
 
             return selectedOptions;
-        } 
+        }
 
         public async Task<IEnumerable<OrderReturnDto>> GetStoreOrders(int storeId)
         {
-            var userOrders = await ((OrderRepository)_orderRepository).GetAllValidOrdersByStore(storeId); 
-            
+            var userOrders = await ((OrderRepository)_orderRepository).GetAllValidOrdersByStore(storeId);
+
             var orderDtos = new List<OrderReturnDto>();
-            
+
             foreach (var order in userOrders)
             {
-                var orderDto = await CreateOrderDto(order); 
+                var orderDto = await CreateOrderDto(order);
                 orderDtos.Add(orderDto);
             }
 
             return orderDtos;
         }
 
+        public async Task<IEnumerable<OrderReturnDto>> GetUserOrders(int userId, int storeId)
+        {
+            var userOrders = await ((OrderRepository)_orderRepository).GetAllValidOrdersByUser(userId, storeId);
+            var orderDtos = new List<OrderReturnDto>();
+
+            foreach (var order in userOrders)
+            {
+                var orderDto = await CreateOrderDto(order);
+                orderDtos.Add(orderDto);
+            }
+            return orderDtos;
+        }
+
         public async Task<IEnumerable<ReturnStoreinfoDto>> GetStoresByCity(string city)
         {
             try
-            {   
+            {
                 var stores = await _storeRepository.Get();
-                var store = stores.Where(x => x.City == city);  
+                var store = stores.Where(x => x.City == city);
                 IEnumerable<ReturnStoreinfoDto> storeDtos = store.Select(x => new ReturnStoreinfoDto
                 {
                     StoreId = x.StoreId,
                     Address = x.Address,
-                    City = x.City,   
+                    City = x.City,
                     Email = x.Email,
-                    Phone = x.PhoneNumber, 
+                    Phone = x.PhoneNumber,
                 });
-                return storeDtos; 
+                return storeDtos;
             }
             catch
             {
-                throw; 
+                throw;
             }
         }
-        
+
         public async Task<ModifyOrderReturnDTO> MakeOrderReady(int ordreId, int storeId)
         {
             try
-            {   
+            {
                 await IsValidOrder(ordreId);
-                var order = await _orderRepository.GetOneById(ordreId);  
+                var order = await _orderRepository.GetOneById(ordreId);
                 if (order.StoreId != storeId) throw new ForbiddenStoreException();
                 if (order.Status != "Accepted") throw new InvalidOrderStatusException();
-                order.Status = "Ready";  
-                await _orderRepository.Update(order); 
+                order.Status = "Ready";
+                await _orderRepository.Update(order);
                 return new ModifyOrderReturnDTO
                 {
                     UserId = order.UserId,
                     StoreId = order.StoreId,
-                    TotalAmount = order.TotalAmount, 
+                    TotalAmount = order.TotalAmount,
                     UpdatedStatus = order.Status
                 };
-            } 
+            }
             catch
             {
-                throw; 
+                throw;
             }
         }
+
     }
 }

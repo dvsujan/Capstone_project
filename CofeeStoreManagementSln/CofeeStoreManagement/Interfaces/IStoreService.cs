@@ -6,6 +6,7 @@ namespace CofeeStoreManagement.Interfaces
     public interface IStoreService
     {
         public Task<IEnumerable<OrderReturnDto>> GetStoreOrders(int storeId);
+        public Task<IEnumerable<OrderReturnDto>> GetUserOrders(int userId, int storeId);
         public Task<ModifyOrderReturnDTO> AcceptOrder(int orderid, int storeId);
         public Task<ModifyOrderReturnDTO> DeclineOrder(int OrderId ,int storeId);
         public Task<ModifyOrderReturnDTO> MakeOrderReady(int ordreId, int storeId); 

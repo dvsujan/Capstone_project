@@ -32,6 +32,7 @@ const Product = () => {
       })
       .catch((error) => {
         console.error("Error fetching product:", error);
+        toast.error("Error fetching product");
       });
 
       if (localStorage.getItem("storeData")) {

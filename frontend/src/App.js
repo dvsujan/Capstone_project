@@ -9,6 +9,10 @@ import Menu from './Pages/Menu/Menu';
 import Product from './Pages/Product/Product'; 
 import Store from './Pages/Store/Store';
 import Cart from './Pages/Cart/Cart';
+import Orders from './Pages/Orders/Orders';
+import EmoloyeeLogin from './Pages/EmployeeLogin/EmoloyeeLogin';
+import StorePage from './Pages/StorePage/StorePage';
+
 function App() {
   return (
     <>
@@ -22,6 +26,9 @@ function App() {
             <Route path="/product/*" element={<Product/>} />
             <Route path="/store" element={<Store/>} />
             <Route path="/cart" element={<Cart/>} />
+            <Route path="/orders" element={<Orders/>} />
+            <Route path="/employee/login" element={<EmoloyeeLogin/>} />
+            <Route path="/employee/store" element={<StorePage/>} />
             <Route path="*" element={<div>404 Not Found</div>} />
           </Routes>
         </Router>
