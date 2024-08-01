@@ -20,7 +20,7 @@ const EmoloyeeLogin = () => {
       toast.error("Invalid email format");
       return;
     } 
-    axios.post("http://localhost:12150/api/Employee/login", { 
+    axios.post(process.env.REACT_APP_API+"/api/Employee/login", { 
       email: enteredUsername,
       password: enteredPassword,
     }).then((response)=>{

@@ -6,6 +6,6 @@ namespace CofeeStoreManagement.Interfaces
     {
         public string GenerateUserToken(User user);
         public string GenerateEmployeeToken(Employee employee);
-        public string GenerateAdminToken(string username, string password); 
+        public Task<string> GenerateAdminToken(string username, string password); 
     }
 }

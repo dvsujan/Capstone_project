@@ -19,3 +19,36 @@
 .store-right{
     flex:.5 ; 
 }
+
+@media (max-width: 768px) {
+  .store-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .store-left, .store-right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .store-left {
+    overflow-y: visible;
+    padding: 10px 0;
+  }
+
+  .store-left input {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .store-left {
+    padding: 5px 0;
+  }
+
+  .store-left input {
+    height: 35px;
+    font-size: 14px;
+  }
+}

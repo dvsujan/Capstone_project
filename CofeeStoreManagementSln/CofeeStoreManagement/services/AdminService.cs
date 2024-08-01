@@ -1,25 +1,39 @@
-﻿using CofeeStoreManagement.Exceptions;
+﻿using Azure.Storage.Blobs;
+using CofeeStoreManagement.Exceptions;
 using CofeeStoreManagement.Interfaces;
 using CofeeStoreManagement.Models;
 using CofeeStoreManagement.Models.DTO.AdminDTO;
 using CofeeStoreManagement.Repositories;
 using Microsoft.Identity.Client;
+using System.IO;
 
 namespace CofeeStoreManagement.services
 {
     public class AdminService : IAdminService
     {
-        private IRepository<int, Product> _productRepository;   
-        private IRepository<int , Category> _categoryRepository;
-        private IRepository<int, ProductCategory> _productCategoryRepository; 
-        private ITokenService _tokenService;
-        public AdminService(IRepository<int, Product> productRepository, IRepository<int, Category> categoryRepository, IRepository<int, ProductCategory> productCategoryRepository, ITokenService tokenService)
+        private readonly IRepository<int, Product> _productRepository;   
+        private readonly IRepository<int , Category> _categoryRepository;
+        private readonly IRepository<int, ProductCategory> _productCategoryRepository; 
+        private readonly IRepository<int , Order> _orderRepository;
+        private readonly ITokenService _tokenService;
+        private readonly IKeyVaultService _keyVaultService;
+        
+        public AdminService(IRepository<int, Product> productRepository, IRepository<int, Category> categoryRepository, IRepository<int, ProductCategory> productCategoryRepository, ITokenService tokenService, IConfiguration configuration, IKeyVaultService keyVaultService, IRepository<int, Order> orderRepository)
         {
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
             _productCategoryRepository = productCategoryRepository;
             _tokenService = tokenService;
+            _keyVaultService = keyVaultService;
+            _orderRepository = orderRepository; 
         }
+
+        /// <summary>
+        /// checks if the category is valid based on the categoryId
+        /// </summary>
+        /// <param name="categoryId"></param>
+        /// <returns></returns>
+        /// <exception cref="CategoryDoesNotExistException"></exception>
         public async Task<bool> IsValidCategoryId(int categoryId)
         {
             try
@@ -35,7 +49,12 @@ namespace CofeeStoreManagement.services
             }
 
         }
-
+        
+        /// <summary>
+        /// add new product to the datbase
+        /// </summary>
+        /// <param name="addProductDto"></param>
+        /// <returns></returns>
         public async Task<AddProductReturnDto> AddNewProduct(AddProductDto addProductDto)
         {
             try
@@ -74,15 +93,20 @@ namespace CofeeStoreManagement.services
             }
         }
         
-        public async Task<AdminLoginReturnDto> LoginReturnDto(AdminLoginDto adminLoginDto)
+        /// <summary>
+        /// logins the admin based on the username and password from the valut
+        /// </summary>
+        /// <param name="adminLoginDto"></param>
+        /// <returns></returns>
+        public async Task<AdminLoginReturnDto> Login(AdminLoginDto adminLoginDto)
         {
             try
             {
-                var username = "admin";
-                var password = "password"; 
+                var username = await _keyVaultService.GetSecretAsync("username");
+                var password = await _keyVaultService.GetSecretAsync("password");
                 if (adminLoginDto.Username.Equals(username) && adminLoginDto.Password.Equals(password))
                 {
-                    var token = _tokenService.GenerateAdminToken(adminLoginDto.Username, adminLoginDto.Password);
+                    var token = await _tokenService.GenerateAdminToken(adminLoginDto.Username, adminLoginDto.Password);
                     var adminLoginReturnDto = new AdminLoginReturnDto
                     {
                         token = token
@@ -96,6 +120,66 @@ namespace CofeeStoreManagement.services
             }
             catch
             {
+                throw; 
+            }
+        }
+        
+        /// <summary>
+        /// upload file to blob and returns the url of that blob
+        /// </summary>
+        /// <param name="fileStream"></param>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public async Task<string> GetUploadedFileUrl(Stream fileStream, string fileName)
+        {
+            var blobConnectionString = await _keyVaultService.GetSecretAsync("BlobUrl"); 
+            var blobServiceClient = new BlobServiceClient(blobConnectionString);
+            var containerClient = blobServiceClient.GetBlobContainerClient("productimages");
+            var blobClient = containerClient.GetBlobClient(fileName);
+            await blobClient.UploadAsync(fileStream, true);
+            return blobClient.Uri.ToString();
+        }
+        
+        /// <summary>
+        /// get the previewous week analytics
+        /// </summary>
+        /// <returns></returns>
+        public async Task<AnalyticsReturnDto> GetPrevWeekAnalytics()
+        {
+            try
+            {
+                var orders = await _orderRepository.Get();
+                var startDate = DateTime.Now.AddDays(-7).Date;
+                var endDate = DateTime.Now.Date;
+                var ordersInPrevWeek = orders.Where(order => order.CreatedAt >= startDate && order.CreatedAt <= endDate).ToList();
+                var groupedOrders = ordersInPrevWeek
+                .GroupBy(order => order.CreatedAt.Date)
+                .Select(group => group.Count())
+                .ToList();
+                var orderCounts = new Dictionary<DateTime, int>();
+                for (var date = startDate; date <= endDate; date = date.AddDays(1))
+                {
+                    orderCounts[date] = 0;
+                }
+
+                foreach (var order in ordersInPrevWeek)
+                {
+                    var orderDate = order.CreatedAt.Date;
+                    if (orderCounts.ContainsKey(orderDate))
+                    {
+                        orderCounts[orderDate]++;
+                    }
+                }
+
+                var analyticsReturnDto = new AnalyticsReturnDto
+                {
+                    Orders = orderCounts.Values.ToList()
+                };
+
+                return analyticsReturnDto;
+
+            }
+            catch {
                 throw; 
             }
         }

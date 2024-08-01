@@ -11,6 +11,7 @@ namespace CofeeStoreManagement.Interfaces
         public Task<ModifyOrderReturnDTO> DeclineOrder(int OrderId ,int storeId);
         public Task<ModifyOrderReturnDTO> MakeOrderReady(int ordreId, int storeId); 
         public Task<IEnumerable<ReturnStoreinfoDto>> GetStoresByCity(string city); 
+        public Task<IEnumerable<ReturnStoreinfoDto>> GetAllStores(); 
 
     }
 }

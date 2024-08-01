@@ -20,7 +20,10 @@ const StorePage = () => {
       },
     };
     axios
-      .get(`http://localhost:12150/api/Store/orders?storeId=${storeId}`, config)
+      .get(
+        `${process.env.REACT_APP_API}/api/Store/orders?storeId=${storeId}`,
+        config
+      )
       .then((response) => {
         setOrders(response.data);
         setIncomingOrders(
@@ -34,11 +37,22 @@ const StorePage = () => {
         toast.error(error.response.data.message);
       });
   };
-  useEffect(() => { 
+  useEffect(() => {
     const token = localStorage.getItem("emp-token");
+
     if (!token) {
       toast.error("Please Login");
       window.location.href = "/employee/login";
+    } else {
+      const headers = {
+        Authorization: `Bearer ${token}`,
+      };
+      axios
+        .get(process.env.REACT_APP_API + "/api/Employee/tst", { headers })
+        .then((response) => {})
+        .catch((error) => {
+          window.location.href = "/employee/login";
+        });
     }
     reFetchOrders();
     const intervalId = setInterval(reFetchOrders, 5000);
@@ -55,7 +69,7 @@ const StorePage = () => {
     };
     axios
       .post(
-        `http://localhost:12150/api/Store/AcceptOrder?orderId=${orderId}&storeId=${storeId}`,
+        `${process.env.REACT_APP_API}/api/Store/AcceptOrder?orderId=${orderId}&storeId=${storeId}`,
         {},
         config
       )
@@ -78,7 +92,7 @@ const StorePage = () => {
     };
     axios
       .post(
-        `http://localhost:12150/api/Store/DeclineOrder?orderId=${orderId}&storeId=${storeId}`,
+        `${process.env.REACT_APP_API}/api/Store/DeclineOrder?orderId=${orderId}&storeId=${storeId}`,
         {},
         config
       )
@@ -101,7 +115,7 @@ const StorePage = () => {
     };
     axios
       .post(
-        `http://localhost:12150/api/Store/ReadyOrder?orderId=${orderId}&storeId=${storeId}`,
+        `${process.env.REACT_APP_API}/api/Store/ReadyOrder?orderId=${orderId}&storeId=${storeId}`,
         {},
         config
       )
@@ -123,9 +137,15 @@ const StorePage = () => {
           <Tab>Ongoing Orders</Tab>
         </TabList>
         <TabPanel className="categories">
-          <h1 className="category-name" style={{ width: "50vw" }}>
-            Incoming Orders
-          </h1>
+          {incomingOrders && incomingOrders.length != 0 && (
+            <h1 className="category-name" style={{ width: "50vw" }}>
+              Incoming Orders
+            </h1>
+          )}
+
+          {incomingOrders && incomingOrders.length === 0 && (
+            <h1>No Incoming Orders</h1>
+          )}
           {incomingOrders &&
             incomingOrders.map((order) => (
               <OrderCard
@@ -140,9 +160,15 @@ const StorePage = () => {
             ))}
         </TabPanel>
         <TabPanel className="categories">
-          <h1 className="category-name" style={{ width: "50vw" }}>
-            Ongoing Orders
-          </h1>
+          {ongoingOrders &&
+            ongoingOrders.length !=0&&(
+                <h1 className="category-name" style={{ width: "50vw" }}>
+                  Ongoing Orders
+                </h1>
+              )}
+          {ongoingOrders && ongoingOrders.length === 0 && (
+            <h1>No Ongoing Orders</h1>
+          )}
           {ongoingOrders &&
             ongoingOrders.map((order) => (
               <OrderCard

@@ -3,10 +3,11 @@ import "./orders.css";
 import axios from "axios";
 import { parseJwt } from "../../global/Global";
 import OrderCard from "../../Components/OrderCard/OrderCard";
+import toast, { Toaster } from "react-hot-toast";
 
 const Orders = () => {
-  const [orders, setOrders] = useState([]); 
-  const fetchOrders = async()=>{ 
+  const [orders, setOrders] = useState([]);
+  const fetchOrders = async () => {
     const token = localStorage.getItem("token");
     const userId = parseJwt(token).UserId;
     const storeData = JSON.parse(localStorage.getItem("storeData"));
@@ -14,10 +15,11 @@ const Orders = () => {
     const headers = {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
-    };
+    }; 
+    toast.promise(
     axios
       .get(
-        `http://localhost:12150/api/Store/userorders?userId=${userId}&storeId=${storeId}`,
+        `${process.env.REACT_APP_API}/api/Store/userorders?userId=${userId}&storeId=${storeId}`,
         { headers }
       )
       .then((response) => {
@@ -25,19 +27,26 @@ const Orders = () => {
       })
       .catch((error) => {
         console.log(error);
-      });
-  }
+      })
+      ,{
+        loading: 'Loading orders...',
+        success: 'Orders Refreshed',
+        error: 'Failed to fetch orders',
+      }
+    ); 
+  };
 
-  useEffect(() => { 
-     fetchOrders();
+  useEffect(() => {
+    fetchOrders();
     const intervalId = setInterval(fetchOrders, 5000);
     return () => clearInterval(intervalId);
-    
   }, []);
   return (
     <div>
-        <h1>Your Orders:</h1>
-        {orders && orders.map((order) => <OrderCard order={order} />)}</div>
+      <h1>Your Orders:</h1>
+      {orders && orders?.toReversed().map((order) => <OrderCard order={order} />)}
+      <Toaster />
+    </div>
   );
 };
 

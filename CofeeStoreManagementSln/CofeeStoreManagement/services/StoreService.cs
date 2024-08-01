@@ -36,7 +36,13 @@ namespace CofeeStoreManagement.services
             _userRepository = userRepository;
             _orderRepository = orderReopsitory;
         }
-
+        
+        /// <summary>
+        /// checks if the order id is valid
+        /// </summary>
+        /// <param name="orderId"></param>
+        /// <returns></returns>
+        /// <exception cref="OrderNotFoundException"></exception>
         public async Task<bool> IsValidOrder(int orderId)
         {
             try
@@ -52,6 +58,12 @@ namespace CofeeStoreManagement.services
             }
         }
         
+        /// <summary>
+        /// accept the new order
+        /// </summary>
+        /// <param name="orderid"></param>
+        /// <param name="storeId"></param>
+        /// <returns></returns>
         public async Task<ModifyOrderReturnDTO> AcceptOrder(int orderid, int storeId)
         {
             try
@@ -78,6 +90,12 @@ namespace CofeeStoreManagement.services
             }
         }
         
+        /// <summary>
+        /// decline the order from stroe
+        /// </summary>
+        /// <param name="OrderId"></param>
+        /// <param name="storeId"></param>
+        /// <returns></returns>
         public async Task<ModifyOrderReturnDTO> DeclineOrder(int OrderId, int storeId)
         {
             try
@@ -104,6 +122,11 @@ namespace CofeeStoreManagement.services
             }
         }
 
+        /// <summary>
+        /// create a new order
+        /// </summary>
+        /// <param name="order"></param>
+        /// <returns></returns>
         private async Task<OrderReturnDto> CreateOrderDto(Order order)
         {
             var user = await _userRepository.GetOneById(order.UserId);
@@ -119,7 +142,13 @@ namespace CofeeStoreManagement.services
 
             return orderDto;
         }
+        
 
+        /// <summary>
+        /// get the order items based on orderId
+        /// </summary>
+        /// <param name="orderId"></param>
+        /// <returns></returns>
         private async Task<List<OrderItemDto>> GetOrderItems(int orderId)
         {
             var orderItems = await _orderItemRepository.Get();
@@ -133,7 +162,12 @@ namespace CofeeStoreManagement.services
 
             return orderItemDtos;
         }
-
+    
+        /// <summary>
+        /// create the order item dto based on order Item passed 
+        /// </summary>
+        /// <param name="orderItem"></param>
+        /// <returns></returns>
         private async Task<OrderItemDto> CreateOrderItemDto(OrderItem orderItem)
         {
             var product = await _productRepository.GetOneById(orderItem.ProductId);
@@ -150,8 +184,13 @@ namespace CofeeStoreManagement.services
             };
 
             return orderItemDto;
-        }
+        } 
 
+        /// <summary>
+        /// Gets the options from db based on the json given
+        /// </summary>
+        /// <param name="selectedOptionsJson"></param>
+        /// <returns></returns>
         private async Task<List<OrderItemOptionDto>> GetSelectedOptions(string selectedOptionsJson)
         {
             var selectedOptionIds = JsonSerializer.Deserialize<List<int>>(selectedOptionsJson);
@@ -173,8 +212,12 @@ namespace CofeeStoreManagement.services
             }
 
             return selectedOptions;
-        }
-
+        } 
+        /// <summary>
+        /// get all the orders from store
+        /// </summary>
+        /// <param name="storeId"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<OrderReturnDto>> GetStoreOrders(int storeId)
         {
             var userOrders = await ((OrderRepository)_orderRepository).GetAllValidOrdersByStore(storeId);
@@ -189,7 +232,13 @@ namespace CofeeStoreManagement.services
 
             return orderDtos;
         }
-
+            
+        /// <summary>
+        /// get the orders by user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="storeId"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<OrderReturnDto>> GetUserOrders(int userId, int storeId)
         {
             var userOrders = await ((OrderRepository)_orderRepository).GetAllValidOrdersByUser(userId, storeId);
@@ -202,6 +251,12 @@ namespace CofeeStoreManagement.services
             }
             return orderDtos;
         }
+
+        /// <summary>
+        /// get all store by the city
+        /// </summary>
+        /// <param name="city"></param>
+        /// <returns></returns>
 
         public async Task<IEnumerable<ReturnStoreinfoDto>> GetStoresByCity(string city)
         {
@@ -224,7 +279,13 @@ namespace CofeeStoreManagement.services
                 throw;
             }
         }
-
+        
+        /// <summary>
+        /// make the order ready for pickup in the store 
+        /// </summary>
+        /// <param name="ordreId"></param>
+        /// <param name="storeId"></param>
+        /// <returns></returns>
         public async Task<ModifyOrderReturnDTO> MakeOrderReady(int ordreId, int storeId)
         {
             try
@@ -248,6 +309,30 @@ namespace CofeeStoreManagement.services
                 throw;
             }
         }
-
+        
+        /// <summary>
+        /// get all the stores that are avalable
+        /// </summary>
+        /// <returns></returns>
+        public async Task<IEnumerable<ReturnStoreinfoDto>> GetAllStores()
+        {
+            try
+            { 
+                var stores = await _storeRepository.Get();
+                var storeDtos = stores.Select(x => new ReturnStoreinfoDto
+                {
+                    StoreId = x.StoreId,
+                    Address = x.Address,
+                    City = x.City,
+                    Email = x.Email,
+                    Phone = x.PhoneNumber,
+                });
+                 return storeDtos;
+            }
+            catch
+            {
+                throw; 
+            }
+        }
     }
 }

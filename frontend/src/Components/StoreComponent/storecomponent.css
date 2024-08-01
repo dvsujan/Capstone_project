@@ -28,3 +28,50 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .store-card {
+    width: 100%;
+    height: auto;
+    padding: 10px 5px;
+  }
+
+  .store-card h2 {
+    font-size: 16px;
+  }
+
+  .store-card p {
+    padding: 3px;
+  }
+
+  .store-card span {
+    flex-direction: column;
+  }
+
+  .store-card button {
+    padding: 8px 15px;
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .store-card {
+    height: auto;
+    padding: 10px 5px;
+  }
+
+  .store-card h2 {
+    font-size: 14px;
+  }
+
+  .store-card p {
+    padding: 2px;
+    font-size: 12px;
+  }
+
+  .store-card button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}

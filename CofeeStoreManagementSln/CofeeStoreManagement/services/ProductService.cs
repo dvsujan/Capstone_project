@@ -32,6 +32,10 @@ namespace CofeeStoreManagement.services
             _productOptionValueRepository = productOptionValueRepository;
         }
 
+        /// <summary>
+        /// get all the product categories
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<CategoryDataDto>> GetCategories()
         {
             try
@@ -51,7 +55,12 @@ namespace CofeeStoreManagement.services
                 throw; 
             }
         }
-
+        
+        /// <summary>
+        /// get product infor based on Id 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<ProductDataDto> GetProductById(int id)
         {
             try
@@ -77,7 +86,13 @@ namespace CofeeStoreManagement.services
                 throw; 
             }
         }
-
+        
+        /// <summary>
+        /// Get the products 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <exception cref="ProductNotFoundException"></exception>
         public async Task<ProductWithCategoriesDto> GetProductWithCategories(int  id)
         {
             var product = await _productRepository.GetOneById(id);
@@ -131,11 +146,6 @@ namespace CofeeStoreManagement.services
                 Categories = categoriesWithOptions
             };
 
-        }
-
-        public Task<IEnumerable<ProductDataDto>> GetTrendingProducts()
-        {
-            throw new NotImplementedException();
         }
     }
 }

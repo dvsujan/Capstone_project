@@ -12,10 +12,17 @@ namespace CofeeStoreManagement.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
-        public UserController(IUserService userService)
+        private readonly ILogger<UserController> _logger;
+        public UserController(IUserService userService, ILogger<UserController> logger)
         {
             _userService = userService;
+            _logger = logger;
         }
+        /// <summary>
+        /// Login the user
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("login")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -34,10 +41,12 @@ namespace CofeeStoreManagement.Controllers
             try
             {
                 var login = await _userService.Login(user);
+                _logger.LogInformation($"User logged in successfully with Email: {login.Email}");
                 return Ok(login);
             }
             catch (EntityNotFoundException)
             {
+                _logger.LogWarning($"User not found userId {user.Email}");
                 return NotFound(new ErrorDTO
                 {
                     Message = "User not found"
@@ -45,6 +54,7 @@ namespace CofeeStoreManagement.Controllers
             }
             catch (IncorrectPasswordException)
             {
+                _logger.LogWarning($"Incorrect password userId {user.Email}");
                 return Conflict(new ErrorDTO
                 {
                     Message = "Incorrect Password"
@@ -53,6 +63,7 @@ namespace CofeeStoreManagement.Controllers
             
             catch (Exception e)
             {
+                _logger.LogError(e.Message); 
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
@@ -79,10 +90,12 @@ namespace CofeeStoreManagement.Controllers
             try
             {
                 var register = await _userService.Register(user);
+                _logger.LogInformation($"User registered successfully with Email: {register.Email}");   
                 return Ok(register);
             }
             catch (UserAlreadyExistsException)
             {
+                _logger.LogWarning($"User already exists {user.Email}");
                 return BadRequest(new ErrorDTO
                 {
                     Message = "User already exists"
@@ -90,9 +103,9 @@ namespace CofeeStoreManagement.Controllers
             }
             catch (Exception e)
             {
+                _logger.LogError(e.Message);
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
-
     }
 }

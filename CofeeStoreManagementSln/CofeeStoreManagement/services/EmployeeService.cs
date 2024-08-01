@@ -20,6 +20,11 @@ namespace CofeeStoreManagement.services
             _tokenService = tokenService;
         }
         
+        /// <summary>
+        /// generate employee token from username and password
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public async Task<EmployeeLoginReturnDto> Login(EmployeeLoginDto dto)
         {
             try
@@ -65,6 +70,12 @@ namespace CofeeStoreManagement.services
             }
             return true;
         } 
+
+        /// <summary>
+        /// checks if employee already exists searches by email
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         public async Task<bool> isEmployeeExist(string email)
         {
             var employee = await ((EmployeeRepository)_employeeRepository).GetEmployeeByEmail(email);
@@ -75,9 +86,14 @@ namespace CofeeStoreManagement.services
             return true;  
         }
         
+        /// <summary>
+        /// register new employee by admin 
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public async Task<EmployeeRegisterReturnDto> Register(EmployeeRegisterDto dto)
         {
-            Employee empReg = null;
+            Employee empReg = null; 
             try
             {
                 if (await isEmployeeExist (dto.Email))
@@ -99,27 +115,20 @@ namespace CofeeStoreManagement.services
                     EmployeeId = empReg.EmployeeId,
                     Email = empReg.Email,
                     Name = empReg.Name,
-                }; 
+                };
             }
-            catch (EntityNotFoundException)
+            catch
             {
-                throw new EntityNotFoundException();
+                throw; 
             }
-            catch (UserAlreadyExistsException)
-            {
-                throw new UserAlreadyExistsException();
-            }
-
-            catch (Exception e)
-            {
-                if (empReg != null)
-                {
-                    await ReverseEmployeeCreation(empReg.EmployeeId);
-                }
-                throw;
-            }
-
+           
         }
+
+        /// <summary>
+        /// reverses the employee created object if any error occurs
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
         async Task ReverseEmployeeCreation(int employeeId)
         {
             await _employeeRepository.Delete(employeeId);

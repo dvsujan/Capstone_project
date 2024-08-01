@@ -13,11 +13,10 @@ const Store = () => {
             const uri = `https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=%20"${res.data.city}"&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed` 
             document.getElementById("map").innerHTML = `<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src=${uri}></iframe>  <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=282a8f1ff73809c9f2c41f5d7b7041bb44262686'></script>`;
             setUserCity(res.data.city);
-            axios.get (`http://localhost:12150/api/Store?city=${res.data.city}`).then((res)=>{
+            axios.get (`${process.env.REACT_APP_API}/api/Store?city=${res.data.city}`).then((res)=>{
                 setStoresData(res.data);
             }).catch((err)=>{
                 console.log(err);
-                toast.error("Error in fetching Stores");
             })
         })
         .catch((err)=>{
@@ -25,7 +24,7 @@ const Store = () => {
         })
     } , [])
     useEffect(()=>{
-        axios.get (`http://localhost:12150/api/Store?city=${userCity}`).then((res)=>{
+        axios.get (`${process.env.REACT_APP_API}/api/Store/city?city=${userCity}`).then((res)=>{
             setStoresData(res.data);
             if (res.data.length != 0){
                 const uri = `https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=%20"${userCity}"&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed` 

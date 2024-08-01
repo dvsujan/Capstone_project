@@ -22,7 +22,11 @@ namespace CofeeStoreManagement.services
             _productCategoryRepository = productCategoryRepository;
             _productRepository = productRepository;
         }
-
+        
+        /// <summary>
+        /// get the menu data by joining the supercateogry with category with product and selecting the details
+        /// </summary>
+        /// <returns></returns>
         public async Task<MenuDto> GetMenu()
         {
             var superCategories = await _superCategoryRepository.Get();

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './navbar.css'
 import Logo from '../../Assets/Logo-small.svg'
 import { parseJwt } from '../../global/Global';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   const [loggedIn, setLoggedIn] = useState(false);  
@@ -23,11 +24,12 @@ const NavBar = () => {
       if(!exceptPaths.includes(path)){
         window.location.href = '/login';
       }
-
-
-      window.location.href = '/login';
     }
-  },[])
+  },[]) 
+  const logoutUser = ()=>{ 
+    localStorage.removeItem("token");
+    window.location.reload(); 
+  }
   
   return (
     <nav>
@@ -37,11 +39,14 @@ const NavBar = () => {
       <div className="right">
         <ul>
           <li><a href="/menu">Menu</a></li>
-          <li><a href="/store">Find a store</a></li> 
+          <li className='nav-store'><a href="/store">Find a store</a></li> 
           {
-            loggedIn ? <li><a href="#">Cart</a></li> : <>
+            loggedIn ? <>
+            <li><a href="/cart">Cart</a></li>
+            <li><a href="/cart" style={{color:'red'}} onClick={logoutUser} className='nav-logout'>Logout</a></li>
+            </> : <>
               <li><a href='/login'>Login</a></li>
-              <li><a href='/register'>Register</a></li>
+              <li><a href='/register' className='nav-register'>Register</a></li>
             </>
           }
         </ul>

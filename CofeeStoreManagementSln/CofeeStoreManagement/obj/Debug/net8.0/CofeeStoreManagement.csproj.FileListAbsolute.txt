@@ -139,3 +139,11 @@ C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\De
 C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\JWT.dll
 C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\Azure.Storage.Blobs.dll
+C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\Azure.Storage.Common.dll
+C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\System.ClientModel.dll
+C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\System.IO.Hashing.dll
+C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\Azure.Security.KeyVault.Secrets.dll
+C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\log4net.config
+C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\log4net.dll
+C:\Users\VC\Desktop\capstone\CofeeStoreManagementSln\CofeeStoreManagement\bin\Debug\net8.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll

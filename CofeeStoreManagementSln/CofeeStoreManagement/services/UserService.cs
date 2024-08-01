@@ -20,6 +20,12 @@ namespace CofeeStoreManagement.services
             _cartRepository = cartRepository; 
         }
         
+        
+        /// <summary>
+        /// generate token based on the username and password
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public async Task<LoginReturnDto> Login(UserLoginDTO dto)
         {
             try
@@ -47,7 +53,8 @@ namespace CofeeStoreManagement.services
             {
                 throw; 
             }
-        }
+        } 
+        
         /// <summary>
         /// used to check if password entered is correct
         /// </summary>

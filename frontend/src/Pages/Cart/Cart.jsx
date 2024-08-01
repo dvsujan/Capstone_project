@@ -23,9 +23,9 @@ const Cart = () => {
     };
     const token = localStorage.getItem("token");
     const userId = parseInt(parseJwt(token).UserId);
-
+    toast.promise(
     axios
-      .get(`http://localhost:12150/api/Cart?userId=${userId}`, { headers })
+      .get(`${process.env.REACT_APP_API}/api/Cart?userId=${userId}`, { headers })
       .then((response) => {
         console.log(response.data);
         setCart(response.data);
@@ -33,7 +33,13 @@ const Cart = () => {
       .catch((error) => {
         console.log(error);
         toast.error("Error Loading Cart");
-      });
+      })
+      ,{
+        loading: 'Loading Cart',
+        success: 'Cart Loaded',
+        error: 'Error Loading Cart',
+      }
+    );
   }, []); 
    useEffect(() => {
     let totalPrice = 0;
@@ -66,12 +72,12 @@ const Cart = () => {
 
     axios
       .delete(
-        `http://localhost:12150/api/Cart?userId=${userId}&productId=${productId}`,
+        `${process.env.REACT_APP_API}/api/Cart?userId=${userId}&productId=${productId}`,
         { headers }
       )
       .then((response) => {
         axios
-          .get(`http://localhost:12150/api/Cart?userId=${userId}`, { headers })
+          .get(`${process.env.REACT_APP_API}/api/Cart?userId=${userId}`, { headers })
           .then((response) => {
             toast.success("Item Removed");
             setCart(response.data);
@@ -100,10 +106,11 @@ const Cart = () => {
         storeId: selectedStore.storeId,
       };
       axios
-        .post("http://localhost:12150/api/Cart/checkout", data, { headers })
+        .post(process.env.REACT_APP_API+"/api/Cart/checkout", data, { headers })
         .then((response) => {
           console.log(response.data);
           toast.success("Order Placed");
+          window.location.href = "/orders";
         })
         .catch((error) => {
           console.log(error);
@@ -135,7 +142,7 @@ const Cart = () => {
       {cart.length > 0 ?
       (
       <div className="cart-right">
-        {cart.map((item) => {
+        {cart?.map((item) => {
           return <CartCard item={item} onRemove={handleRemove} />;
         })}
         <div className="cart-total">
@@ -147,7 +154,7 @@ const Cart = () => {
       </div>
       ):(<div className="cart-right">
         <h1>Cart is Empty</h1>
-        <button className="checkout-btn" onClick={() => {window.location.href = "/menu";}}>Add Items</button>
+        <button className="checkout-btn" onClick={() => {window.location.href = "/orders";}}>View Orders</button>
       </div>)}
       <Toaster />
     </div>

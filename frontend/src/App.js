@@ -13,6 +13,7 @@ import Orders from './Pages/Orders/Orders';
 import EmoloyeeLogin from './Pages/EmployeeLogin/EmoloyeeLogin';
 import StorePage from './Pages/StorePage/StorePage';
 import AdminPage from './Pages/AdminPage/AdminPage';
+import AdminLogin from './Pages/AdminLogin/AdminLogin';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/employee/login" element={<EmoloyeeLogin/>} />
             <Route path="/employee/store" element={<StorePage/>} />
             <Route path="/admin" element={<AdminPage/>} />
+            <Route path="/admin/login" element={<AdminLogin/>} />
             <Route path="*" element={<div>404 Not Found</div>} />
           </Routes>
         </Router>

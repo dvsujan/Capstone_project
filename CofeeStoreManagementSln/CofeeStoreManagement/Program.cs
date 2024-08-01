@@ -17,7 +17,10 @@ namespace CofeeStoreManagement
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            
+            builder.Logging.ClearProviders(); 
+            builder.Logging.AddLog4Net(); 
+
+
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
              .AddJwtBearer(options =>
              {
@@ -95,9 +98,11 @@ namespace CofeeStoreManagement
             builder.Services.AddScoped<IStoreService, StoreService>();  
             builder.Services.AddScoped<IEmployeeService, EmployeeService>();   
             builder.Services.AddScoped<IAdminService, AdminService>();   
+            builder.Services.AddScoped<IKeyVaultService, KeyVaultService>();
             #endregion
 
 
+            
 
             #region CORS 
             builder.Services.AddCors(options =>

@@ -10,7 +10,6 @@ const Login = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
-
   const handleLogin = (e) => {
     e.preventDefault();
     const enteredUsername = usernameRef.current.value;
@@ -19,7 +18,7 @@ const Login = () => {
       toast.error("Invalid email format");
       return;
     } 
-    axios.post("http://localhost:12150/api/User/login", { 
+    axios.post(process.env.REACT_APP_API+"/api/User/login", { 
       email: enteredUsername,
       password: enteredPassword,
     }).then((response)=>{
@@ -59,7 +58,7 @@ const Login = () => {
           /> 
 
           <button  onClick={handleLogin}>Sign In</button>
-          <a href="#">New? Join Here</a>
+          <a href="/register">New? Join Here</a>
         </form>
       </div> 
       <Toaster/>

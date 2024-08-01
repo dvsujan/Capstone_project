@@ -44,6 +44,14 @@ namespace CofeeStoreManagement.services
             _orderItemRepository = orderItemRepository;
         }
 
+
+        /// <summary>
+        /// check if the user is valid from the userId
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        /// <exception cref="UserDoesNotExistException"></exception>
+
         private async Task<bool> CheckIfValidUser(int userId)
         {
             try
@@ -61,6 +69,12 @@ namespace CofeeStoreManagement.services
             } 
             
         }
+        /// <summary>
+        /// check if the product is valid from the productId
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <returns></returns>
+        /// <exception cref="ProductDoesNotExistException"></exception>
          private async Task<bool> CheckIfValidProduct(int productId)
         {
             try
@@ -80,6 +94,12 @@ namespace CofeeStoreManagement.services
         }
 
 
+        /// <summary>
+        /// checks if the store is valid from the store Id
+        /// </summary>
+        /// <param name="storeId"></param>
+        /// <returns></returns>
+        /// <exception cref="StoreDoesNotExistException"></exception>
         public async Task<bool> CheckIfValidStore(int storeId){
             try
             {   
@@ -95,9 +115,12 @@ namespace CofeeStoreManagement.services
                 throw; 
             }
         }
-
-          
-
+        
+        /// <summary>
+        /// add new item to the user cart
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public async Task<CartReturnDto> AddItemToCart(CartDto dto)
         {
             try
@@ -151,6 +174,11 @@ namespace CofeeStoreManagement.services
                 throw; 
             }
         }
+        /// <summary>
+        /// clear every Item in the cart
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         private async Task ClearCart(int userId)
         {
             try
@@ -177,7 +205,12 @@ namespace CofeeStoreManagement.services
             
         }
 
-
+        
+        /// <summary>
+        /// checkout the userItems from the user and create the orders for the store 
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public async Task<CheckoutReturnDto> Checkout(CheckoutDto dto)
         {
             try
@@ -272,6 +305,12 @@ namespace CofeeStoreManagement.services
             }
         }
         
+        /// <summary>
+        /// delete an item from the cart
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="productId"></param>
+        /// <returns></returns>
         public async Task<CartReturnDto> DeleteItemFromCart(int userId , int productId)
         {
             try
@@ -311,6 +350,11 @@ namespace CofeeStoreManagement.services
             }
         }
         
+        /// <summary>
+        /// get all items in teh cart by the userId
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<CartItemDto>> GetAllItemsInCart(int userId)
         {
             try
