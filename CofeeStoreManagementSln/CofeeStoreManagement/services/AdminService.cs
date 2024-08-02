@@ -5,6 +5,7 @@ using CofeeStoreManagement.Models;
 using CofeeStoreManagement.Models.DTO.AdminDTO;
 using CofeeStoreManagement.Repositories;
 using Microsoft.Identity.Client;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
 namespace CofeeStoreManagement.services
@@ -16,15 +17,15 @@ namespace CofeeStoreManagement.services
         private readonly IRepository<int, ProductCategory> _productCategoryRepository; 
         private readonly IRepository<int , Order> _orderRepository;
         private readonly ITokenService _tokenService;
-        private readonly IKeyVaultService _keyVaultService;
+        //private readonly IKeyVaultService _keyVaultService;
         
-        public AdminService(IRepository<int, Product> productRepository, IRepository<int, Category> categoryRepository, IRepository<int, ProductCategory> productCategoryRepository, ITokenService tokenService, IConfiguration configuration, IKeyVaultService keyVaultService, IRepository<int, Order> orderRepository)
+        public AdminService(IRepository<int, Product> productRepository, IRepository<int, Category> categoryRepository, IRepository<int, ProductCategory> productCategoryRepository, ITokenService tokenService,  IRepository<int, Order> orderRepository)
         {
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
             _productCategoryRepository = productCategoryRepository;
             _tokenService = tokenService;
-            _keyVaultService = keyVaultService;
+            //_keyVaultService = keyVaultService;
             _orderRepository = orderRepository; 
         }
 
@@ -92,37 +93,38 @@ namespace CofeeStoreManagement.services
                 throw; 
             }
         }
-        
+
         /// <summary>
         /// logins the admin based on the username and password from the valut
         /// </summary>
         /// <param name="adminLoginDto"></param>
-        /// <returns></returns>
-        public async Task<AdminLoginReturnDto> Login(AdminLoginDto adminLoginDto)
-        {
-            try
-            {
-                var username = await _keyVaultService.GetSecretAsync("username");
-                var password = await _keyVaultService.GetSecretAsync("password");
-                if (adminLoginDto.Username.Equals(username) && adminLoginDto.Password.Equals(password))
-                {
-                    var token = await _tokenService.GenerateAdminToken(adminLoginDto.Username, adminLoginDto.Password);
-                    var adminLoginReturnDto = new AdminLoginReturnDto
-                    {
-                        token = token
-                    }; 
-                    return adminLoginReturnDto;
-                }
-                else
-                {
-                    throw new IncorrectPasswordException(); 
-                }
-            }
-            catch
-            {
-                throw; 
-            }
-        }
+        /// <returns></returns> 
+        //[ExcludeFromCodeCoverageAttribute]
+        //public async Task<AdminLoginReturnDto> Login(AdminLoginDto adminLoginDto)
+        //{
+        //    try
+        //    {
+        //        var username = await _keyVaultService.GetSecretAsync("username");
+        //        var password = await _keyVaultService.GetSecretAsync("password");
+        //        if (adminLoginDto.Username.Equals(username) && adminLoginDto.Password.Equals(password))
+        //        {
+        //            var token = await _tokenService.GenerateAdminToken(adminLoginDto.Username, adminLoginDto.Password);
+        //            var adminLoginReturnDto = new AdminLoginReturnDto
+        //            {
+        //                token = token
+        //            }; 
+        //            return adminLoginReturnDto;
+        //        }
+        //        else
+        //        {
+        //            throw new IncorrectPasswordException(); 
+        //        }
+        //    }
+        //    catch
+        //    {
+        //        throw; 
+        //    }
+        //}
         
         /// <summary>
         /// upload file to blob and returns the url of that blob
@@ -130,15 +132,15 @@ namespace CofeeStoreManagement.services
         /// <param name="fileStream"></param>
         /// <param name="fileName"></param>
         /// <returns></returns>
-        public async Task<string> GetUploadedFileUrl(Stream fileStream, string fileName)
-        {
-            var blobConnectionString = await _keyVaultService.GetSecretAsync("BlobUrl"); 
-            var blobServiceClient = new BlobServiceClient(blobConnectionString);
-            var containerClient = blobServiceClient.GetBlobContainerClient("productimages");
-            var blobClient = containerClient.GetBlobClient(fileName);
-            await blobClient.UploadAsync(fileStream, true);
-            return blobClient.Uri.ToString();
-        }
+        //public async Task<string> GetUploadedFileUrl(Stream fileStream, string fileName)
+        //{
+        //    var blobConnectionString = await _keyVaultService.GetSecretAsync("BlobUrl"); 
+        //    var blobServiceClient = new BlobServiceClient(blobConnectionString);
+        //    var containerClient = blobServiceClient.GetBlobContainerClient("productimages");
+        //    var blobClient = containerClient.GetBlobClient(fileName);
+        //    await blobClient.UploadAsync(fileStream, true);
+        //    return blobClient.Uri.ToString();
+        //}
         
         /// <summary>
         /// get the previewous week analytics

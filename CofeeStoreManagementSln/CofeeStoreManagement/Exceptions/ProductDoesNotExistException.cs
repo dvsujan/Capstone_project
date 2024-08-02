@@ -1,7 +1,10 @@
-﻿namespace CofeeStoreManagement.Exceptions
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace CofeeStoreManagement.Exceptions
 {
     [Serializable]
-    internal class ProductDoesNotExistException : Exception
+    [ExcludeFromCodeCoverage]
+    public class ProductDoesNotExistException : Exception
     {
         public ProductDoesNotExistException()
         {

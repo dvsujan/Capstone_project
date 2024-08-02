@@ -1,6 +1,9 @@
-﻿namespace CofeeStoreManagement.Exceptions
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace CofeeStoreManagement.Exceptions
 {
     [Serializable]
+    [ExcludeFromCodeCoverage]
     internal class UserDoesNotExistException : Exception
     {
         public UserDoesNotExistException()

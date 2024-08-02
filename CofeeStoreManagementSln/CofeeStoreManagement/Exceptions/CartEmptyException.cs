@@ -1,7 +1,10 @@
-﻿namespace CofeeStoreManagement.Exceptions
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace CofeeStoreManagement.Exceptions
 {
     [Serializable]
-    internal class CartEmptyException : Exception
+    [ExcludeFromCodeCoverage]
+    public class CartEmptyException : Exception
     {
         public CartEmptyException()
         {

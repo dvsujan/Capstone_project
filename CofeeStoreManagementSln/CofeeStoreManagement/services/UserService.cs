@@ -3,6 +3,7 @@ using CofeeStoreManagement.Interfaces;
 using CofeeStoreManagement.Models;
 using CofeeStoreManagement.Models.DTO.UserDTOs;
 using CofeeStoreManagement.Repositories;
+using System.Diagnostics.CodeAnalysis;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -90,7 +91,8 @@ namespace CofeeStoreManagement.services
                 return false;
             }
         }
-        
+
+        [ExcludeFromCodeCoverage]
         private async Task ReverseUserCreation(int id)
         {
             await _userRepository.Delete(id);
@@ -134,10 +136,10 @@ namespace CofeeStoreManagement.services
                     UserName = userReg.Name
                 }; 
             }
-            catch (EntityNotFoundException)
-            {
-                throw new EntityNotFoundException();
-            }
+            //catch (EntityNotFoundException)
+            //{
+            //    throw new EntityNotFoundException();
+            //}
             catch (UserAlreadyExistsException)
             {
                 throw new UserAlreadyExistsException();

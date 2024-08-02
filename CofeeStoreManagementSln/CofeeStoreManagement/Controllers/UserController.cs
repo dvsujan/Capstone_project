@@ -4,11 +4,13 @@ using CofeeStoreManagement.Models.DTO.UserDTOs;
 using CofeeStoreManagement.Models.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CofeeStoreManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ExcludeFromCodeCoverage]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;

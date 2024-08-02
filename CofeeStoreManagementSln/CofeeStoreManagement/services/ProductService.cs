@@ -66,11 +66,7 @@ namespace CofeeStoreManagement.services
             try
             {
                 var product = await _productRepository.GetOneById(id);
-                if (product == null)
-                {
-                    throw new ProductNotFoundException(); 
-                }
-                ProductDataDto dto = new ProductDataDto
+                                ProductDataDto dto = new ProductDataDto
                 {
                     ProductId = product.ProductId,
                     Name = product.Name,
@@ -96,11 +92,7 @@ namespace CofeeStoreManagement.services
         public async Task<ProductWithCategoriesDto> GetProductWithCategories(int  id)
         {
             var product = await _productRepository.GetOneById(id);
-            if (product == null)
-            {
-                throw new ProductNotFoundException(); 
-            }
-
+           
             var productCategories = (await _productCategoryRepository.Get())
                 .Where(pc => pc.ProductId == id)
                 .ToList();

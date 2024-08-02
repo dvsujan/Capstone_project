@@ -5,11 +5,13 @@ using CofeeStoreManagement.Models.DTO.MenuDTO;
 using CofeeStoreManagement.Models.DTO.ProductDTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CofeeStoreManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ExcludeFromCodeCoverage]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService; 

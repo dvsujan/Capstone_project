@@ -31,8 +31,28 @@
       "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\log4net.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\log4net.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoerbltesting\\employeeservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|solutionrelative:cofeestoerbltesting\\employeeservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoerbltesting\\menuservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|solutionrelative:cofeestoerbltesting\\menuservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoerbltesting\\cartservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|solutionrelative:cofeestoerbltesting\\cartservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoerbltesting\\adminservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|solutionrelative:cofeestoerbltesting\\adminservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoerbltesting\\productservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|solutionrelative:cofeestoerbltesting\\productservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoerbltesting\\storeservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|solutionrelative:cofeestoerbltesting\\storeservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,16 +63,64 @@
       "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\userdoesnotexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\userdoesnotexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\useralreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\useralreadyexistsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\storedoesnotexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\storedoesnotexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\productnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\productnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\productdoesnotexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\productdoesnotexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\ordernotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\ordernotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\invalidorderstatusexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\invalidorderstatusexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\incorrectpasswordexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\incorrectpasswordexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\forbiddenstoreexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\forbiddenstoreexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\entitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\entitynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\categorydoesnotexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\categorydoesnotexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\cartnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\cartnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\exceptions\\cartemptyexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\exceptions\\cartemptyexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\interfaces\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\interfaces\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\services\\keyvaultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\services\\keyvaultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\services\\menuservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,28 +135,60 @@
       "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\services\\storeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoerbltesting\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{094B826D-9E94-4306-BBA6-C64CD4B94C10}|CofeeStoerBLTesting\\CofeeStoerBLTesting.csproj|solutionrelative:cofeestoerbltesting\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9210C802-524A-4582-84AD-4013FE58052F}|CofeeStoreManagementRepositoryTest\\CofeeStoreManagementRepositoryTest.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagementrepositorytest\\userrepositorytesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9210C802-524A-4582-84AD-4013FE58052F}|CofeeStoreManagementRepositoryTest\\CofeeStoreManagementRepositoryTest.csproj|solutionrelative:cofeestoremanagementrepositorytest\\userrepositorytesting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\interfaces\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\interfaces\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9210C802-524A-4582-84AD-4013FE58052F}|CofeeStoreManagementRepositoryTest\\CofeeStoreManagementRepositoryTest.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagementrepositorytest\\orderrepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9210C802-524A-4582-84AD-4013FE58052F}|CofeeStoreManagementRepositoryTest\\CofeeStoreManagementRepositoryTest.csproj|solutionrelative:cofeestoremanagementrepositorytest\\orderrepositorytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\interfaces\\ikeyvaultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\interfaces\\ikeyvaultservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\repositories\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9210C802-524A-4582-84AD-4013FE58052F}|CofeeStoreManagementRepositoryTest\\CofeeStoreManagementRepositoryTest.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagementrepositorytest\\storerepotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9210C802-524A-4582-84AD-4013FE58052F}|CofeeStoreManagementRepositoryTest\\CofeeStoreManagementRepositoryTest.csproj|solutionrelative:cofeestoremanagementrepositorytest\\storerepotest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\repositories\\storerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\repositories\\storerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9210C802-524A-4582-84AD-4013FE58052F}|CofeeStoreManagementRepositoryTest\\CofeeStoreManagementRepositoryTest.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagementrepositorytest\\repostest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9210C802-524A-4582-84AD-4013FE58052F}|CofeeStoreManagementRepositoryTest\\CofeeStoreManagementRepositoryTest.csproj|solutionrelative:cofeestoremanagementrepositorytest\\repostest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\repositories\\supercategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\repositories\\supercategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\repositories\\abstractrepositoryclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\repositories\\abstractrepositoryclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|c:\\users\\vc\\desktop\\capstone\\cofeestoremanagementsln\\cofeestoremanagement\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25626D43-1E2A-4386-BD8E-B8125108D66B}|CofeeStoreManagement\\CofeeStoreManagement.csproj|solutionrelative:cofeestoremanagement\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -97,59 +197,20 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 256,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 252,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\CartController.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\Controllers\\CartController.cs",
-              "ViewState": "AQIAAOQAAAAAAAAAAAAAAPEAAAAQAAAA",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\UserController.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAQwAwAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:26:34.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\Controllers\\EmployeeController.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAqwGgAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T17:19:58.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MenuController.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\MenuController.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\MenuController.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\MenuController.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\Controllers\\MenuController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:28:43.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAqwHcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:29:04.13Z",
+              "WhenOpened": "2024-08-02T10:02:26Z",
               "EditorCaption": ""
             },
             {
@@ -160,22 +221,100 @@
               "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\StoreController.cs",
               "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\StoreController.cs",
               "RelativeToolTip": "CofeeStoreManagement\\Controllers\\StoreController.cs",
-              "ViewState": "AQIAAB8BAAAAAAAAAAAAAD0BAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T04:46:09.883Z",
+              "WhenOpened": "2024-08-02T10:02:18.503Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\UserController.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAmwFgAAAAMAAAA",
+              "DocumentIndex": 2,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:31:33.191Z",
+              "WhenOpened": "2024-08-02T10:02:10.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\MenuController.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\MenuController.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\MenuController.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Controllers\\MenuController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:02:02.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Controllers\\EmployeeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:01:55.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\CartController.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Controllers\\CartController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T10:01:47.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\EmployeeServiceTest.cs",
+              "RelativeDocumentMoniker": "CofeeStoerBLTesting\\EmployeeServiceTest.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\EmployeeServiceTest.cs",
+              "RelativeToolTip": "CofeeStoerBLTesting\\EmployeeServiceTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:19:22.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MenuServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\MenuServiceTest.cs",
+              "RelativeDocumentMoniker": "CofeeStoerBLTesting\\MenuServiceTest.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\MenuServiceTest.cs",
+              "RelativeToolTip": "CofeeStoerBLTesting\\MenuServiceTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAgwBEAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:12:34.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CartServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\CartServiceTest.cs",
+              "RelativeDocumentMoniker": "CofeeStoerBLTesting\\CartServiceTest.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\CartServiceTest.cs",
+              "RelativeToolTip": "CofeeStoerBLTesting\\CartServiceTest.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAqwBQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:37:44.812Z",
               "EditorCaption": ""
             },
             {
@@ -186,210 +325,496 @@
               "RelativeDocumentMoniker": "CofeeStoreManagement\\Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Controllers\\AdminController.cs",
               "RelativeToolTip": "CofeeStoreManagement\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAJwAAAAsAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAiwA4AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T17:20:29.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "log4net.config",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\log4net.config",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\log4net.config",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\log4net.config",
-              "RelativeToolTip": "CofeeStoreManagement\\log4net.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-08-01T11:01:21.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Program.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\Program.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Program.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T11:06:21.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdminService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\AdminService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\AdminService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\AdminService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\services\\AdminService.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCsAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T06:06:56.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IAdminService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Interfaces\\IAdminService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\Interfaces\\IAdminService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Interfaces\\IAdminService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\Interfaces\\IAdminService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T17:26:00.629Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 144,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\EmployeeService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\EmployeeService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\services\\EmployeeService.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAowH8AAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T17:20:48.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "KeyVaultService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\KeyVaultService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\KeyVaultService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\KeyVaultService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\services\\KeyVaultService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T16:25:05.271Z",
+              "WhenOpened": "2024-08-02T09:45:28.014Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "CartService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\CartService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\CartService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\CartService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\services\\CartService.cs",
-              "ViewState": "AQIAAIQBAAAAAAAAAAAgwGEBAAAyAAAA",
+              "Title": "AdminServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\AdminServiceTest.cs",
+              "RelativeDocumentMoniker": "CofeeStoerBLTesting\\AdminServiceTest.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\AdminServiceTest.cs",
+              "RelativeToolTip": "CofeeStoerBLTesting\\AdminServiceTest.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAUwBIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:42:28.413Z",
+              "WhenOpened": "2024-08-02T09:30:17.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MenuService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\MenuService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\MenuService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\MenuService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\services\\MenuService.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAgwBoAAABuAAAA",
+              "DocumentIndex": 11,
+              "Title": "ProductServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\ProductServiceTest.cs",
+              "RelativeDocumentMoniker": "CofeeStoerBLTesting\\ProductServiceTest.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\ProductServiceTest.cs",
+              "RelativeToolTip": "CofeeStoerBLTesting\\ProductServiceTest.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T16:30:12.042Z",
+              "WhenOpened": "2024-08-02T08:58:22.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\ProductService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\ProductService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\ProductService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\services\\ProductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "DocumentIndex": 12,
+              "Title": "StoreServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\StoreServiceTest.cs",
+              "RelativeDocumentMoniker": "CofeeStoerBLTesting\\StoreServiceTest.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\StoreServiceTest.cs",
+              "RelativeToolTip": "CofeeStoerBLTesting\\StoreServiceTest.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABIAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:35:10.532Z",
+              "WhenOpened": "2024-08-02T07:07:00.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "StoreService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\StoreService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\StoreService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\StoreService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\services\\StoreService.cs",
-              "ViewState": "AQIAACsBAAAAAAAAAAAqwFEBAAAAAAAA",
+              "Title": "UserDoesNotExistException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\UserDoesNotExistException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\UserDoesNotExistException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\UserDoesNotExistException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\UserDoesNotExistException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:34:01.746Z",
+              "WhenOpened": "2024-08-02T09:57:33.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\TokenService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\TokenService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\TokenService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\services\\TokenService.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowDcAAABiAAAA",
+              "Title": "UserAlreadyExistsException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\UserAlreadyExistsException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\UserAlreadyExistsException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\UserAlreadyExistsException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\UserAlreadyExistsException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T03:35:14.428Z",
+              "WhenOpened": "2024-08-02T09:57:21.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\UserService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\UserService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\UserService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\services\\UserService.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAmwJYAAAAQAAAA",
+              "Title": "StoreDoesNotExistException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\StoreDoesNotExistException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\StoreDoesNotExistException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\StoreDoesNotExistException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\StoreDoesNotExistException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:52:20.949Z",
+              "WhenOpened": "2024-08-02T09:57:12.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\Interfaces\\IProductService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\Interfaces\\IProductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Title": "ProductNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\ProductNotFoundException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\ProductNotFoundException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\ProductNotFoundException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\ProductNotFoundException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T09:52:04.205Z",
+              "WhenOpened": "2024-08-02T09:57:03.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IKeyVaultService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Interfaces\\IKeyVaultService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\Interfaces\\IKeyVaultService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Interfaces\\IKeyVaultService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\Interfaces\\IKeyVaultService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "DocumentIndex": 19,
+              "Title": "ProductDoesNotExistException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\ProductDoesNotExistException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\ProductDoesNotExistException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\ProductDoesNotExistException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\ProductDoesNotExistException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T16:24:28.832Z",
+              "WhenOpened": "2024-08-02T09:56:56.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Interfaces\\ITokenService.cs",
-              "RelativeDocumentMoniker": "CofeeStoreManagement\\Interfaces\\ITokenService.cs",
-              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Interfaces\\ITokenService.cs",
-              "RelativeToolTip": "CofeeStoreManagement\\Interfaces\\ITokenService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
+              "Title": "OrderNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\OrderNotFoundException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\OrderNotFoundException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\OrderNotFoundException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\OrderNotFoundException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T05:21:12.096Z",
+              "WhenOpened": "2024-08-02T09:56:46.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "InvalidOrderStatusException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\InvalidOrderStatusException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\InvalidOrderStatusException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\InvalidOrderStatusException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\InvalidOrderStatusException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:56:37.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IncorrectPasswordException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\IncorrectPasswordException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\IncorrectPasswordException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\IncorrectPasswordException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\IncorrectPasswordException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:56:20.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ForbiddenStoreException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\ForbiddenStoreException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\ForbiddenStoreException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\ForbiddenStoreException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\ForbiddenStoreException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:56:12.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EntityNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\EntityNotFoundException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\EntityNotFoundException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\EntityNotFoundException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\EntityNotFoundException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:56:03.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CategoryDoesNotExistException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\CategoryDoesNotExistException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\CategoryDoesNotExistException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\CategoryDoesNotExistException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\CategoryDoesNotExistException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:55:51.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CartNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\CartNotFoundException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\CartNotFoundException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\CartNotFoundException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\CartNotFoundException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:55:44.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CartEmptyException.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\CartEmptyException.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Exceptions\\CartEmptyException.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Exceptions\\CartEmptyException.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Exceptions\\CartEmptyException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:55:26.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "CofeeStoerBLTesting\\UnitTest1.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoerBLTesting\\UnitTest1.cs",
+              "RelativeToolTip": "CofeeStoerBLTesting\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:08:13.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Repositories\\EmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\EmployeeRepository.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Repositories\\EmployeeRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:32:08.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UserRepositoryTesting.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagementRepositoryTest\\UserRepositoryTesting.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagementRepositoryTest\\UserRepositoryTesting.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagementRepositoryTest\\UserRepositoryTesting.cs",
+              "RelativeToolTip": "CofeeStoreManagementRepositoryTest\\UserRepositoryTesting.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAcwBIAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T04:14:25.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "StoreRepoTEst.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagementRepositoryTest\\StoreRepoTEst.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagementRepositoryTest\\StoreRepoTEst.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagementRepositoryTest\\StoreRepoTEst.cs",
+              "RelativeToolTip": "CofeeStoreManagementRepositoryTest\\StoreRepoTEst.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:23:33.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ReposTest.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagementRepositoryTest\\ReposTest.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagementRepositoryTest\\ReposTest.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagementRepositoryTest\\ReposTest.cs",
+              "RelativeToolTip": "CofeeStoreManagementRepositoryTest\\ReposTest.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:13:05.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "OrderRepositoryTest.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagementRepositoryTest\\OrderRepositoryTest.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagementRepositoryTest\\OrderRepositoryTest.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagementRepositoryTest\\OrderRepositoryTest.cs",
+              "RelativeToolTip": "CofeeStoreManagementRepositoryTest\\OrderRepositoryTest.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAASwBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:27:43.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "SuperCategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\SuperCategoryRepository.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Repositories\\SuperCategoryRepository.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\SuperCategoryRepository.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Repositories\\SuperCategoryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:12:48.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Models\\User.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Models\\User.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T04:47:03.106Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 240,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Program.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Program.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Program.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAQwA8AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:59:45.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IAdminService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Interfaces\\IAdminService.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Interfaces\\IAdminService.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Interfaces\\IAdminService.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Interfaces\\IAdminService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:30:40.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\AdminService.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\AdminService.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\AdminService.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\services\\AdminService.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAowDQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:27:48.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\EmployeeService.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\services\\EmployeeService.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAwwGQAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:18:43.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\ProductService.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\ProductService.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\services\\ProductService.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA1wBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T08:57:57.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MenuService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\MenuService.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\MenuService.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\MenuService.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\services\\MenuService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T08:56:40.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "StoreService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\StoreService.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\StoreService.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\StoreService.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\services\\StoreService.cs",
+              "ViewState": "AQIAADIBAAAAAAAAAAAAAC4BAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T07:06:44.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\CartService.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\CartService.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\CartService.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\services\\CartService.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAwwH0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:37:55.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\UserService.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\services\\UserService.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\services\\UserService.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\services\\UserService.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAAAJoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:13:26.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Repositories\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\OrderRepository.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Repositories\\OrderRepository.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAgwBwAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:27:16.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "StoreRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\StoreRepository.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Repositories\\StoreRepository.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\StoreRepository.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Repositories\\StoreRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:24:56.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "AbstractRepositoryClass.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\AbstractRepositoryClass.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Repositories\\AbstractRepositoryClass.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\AbstractRepositoryClass.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Repositories\\AbstractRepositoryClass.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAowB8AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T05:02:22.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "CofeeStoreManagement\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\VC\\Desktop\\capstone\\CofeeStoreManagementSln\\CofeeStoreManagement\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "CofeeStoreManagement\\Repositories\\UserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T04:51:52.249Z",
               "EditorCaption": ""
             }
           ]

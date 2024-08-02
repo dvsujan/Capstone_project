@@ -13,13 +13,11 @@ namespace CofeeStoreManagement.services
     { 
         private readonly string _secretKey;
         private readonly SymmetricSecurityKey _key;
-        private readonly IKeyVaultService _keyVaultService;
         
-        public TokenService(IConfiguration configuration, IKeyVaultService keyvaultservice)
+        public TokenService(IConfiguration configuration)
         {
             _secretKey = configuration.GetSection("TokenKey").GetSection("JWT").Value.ToString();
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secretKey));
-            _keyVaultService = keyvaultservice; 
         }
 
          /// <summary>

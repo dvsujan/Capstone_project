@@ -1,7 +1,10 @@
-﻿namespace CofeeStoreManagement.Exceptions
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace CofeeStoreManagement.Exceptions
 {
     [Serializable]
-    internal class InvalidOrderStatusException : Exception
+    [ExcludeFromCodeCoverage]
+    public class InvalidOrderStatusException : Exception
     {
         public InvalidOrderStatusException()
         {

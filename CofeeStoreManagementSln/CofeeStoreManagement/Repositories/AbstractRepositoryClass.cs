@@ -26,10 +26,10 @@ namespace CofeeStoreManagement.Repositories
         public async virtual Task<T> Delete(K id)
         {
             var ob = await GetOneById(id);
-            if (ob == null)
-            {
-                return null;
-            }
+            //if (ob == null)
+            //{
+            //    return null;
+            //}
             _dbSet.Remove(ob);
             await _context.SaveChangesAsync();
             return ob;

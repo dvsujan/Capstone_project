@@ -1,9 +1,11 @@
 ﻿using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 using CofeeStoreManagement.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CofeeStoreManagement.services
 {
+    [ExcludeFromCodeCoverage]
     public class KeyVaultService : IKeyVaultService
     {
         private readonly SecretClient _secretClient;

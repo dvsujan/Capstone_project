@@ -6,6 +6,7 @@ using CofeeStoreManagement.Models.DTO.CheckoutDTO;
 using CofeeStoreManagement.Repositories;
 using Microsoft.Extensions.Options;
 using Microsoft.Identity.Client;
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
 
 namespace CofeeStoreManagement.services
@@ -51,7 +52,7 @@ namespace CofeeStoreManagement.services
         /// <param name="userId"></param>
         /// <returns></returns>
         /// <exception cref="UserDoesNotExistException"></exception>
-
+        [ExcludeFromCodeCoverage]
         private async Task<bool> CheckIfValidUser(int userId)
         {
             try
@@ -63,11 +64,6 @@ namespace CofeeStoreManagement.services
             {
                 throw new UserDoesNotExistException(); 
             }
-            catch
-            {
-                throw; 
-            } 
-            
         }
         /// <summary>
         /// check if the product is valid from the productId
@@ -75,6 +71,7 @@ namespace CofeeStoreManagement.services
         /// <param name="productId"></param>
         /// <returns></returns>
         /// <exception cref="ProductDoesNotExistException"></exception>
+        [ExcludeFromCodeCoverage]
          private async Task<bool> CheckIfValidProduct(int productId)
         {
             try
@@ -86,11 +83,6 @@ namespace CofeeStoreManagement.services
             {
                 throw new ProductDoesNotExistException(); 
             }
-            catch
-            {
-                throw; 
-            } 
-            
         }
 
 
@@ -100,6 +92,7 @@ namespace CofeeStoreManagement.services
         /// <param name="storeId"></param>
         /// <returns></returns>
         /// <exception cref="StoreDoesNotExistException"></exception>
+        [ExcludeFromCodeCoverage]
         public async Task<bool> CheckIfValidStore(int storeId){
             try
             {   

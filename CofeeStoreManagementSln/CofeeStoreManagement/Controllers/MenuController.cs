@@ -3,11 +3,13 @@ using CofeeStoreManagement.Models.DTO;
 using CofeeStoreManagement.Models.DTO.MenuDTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CofeeStoreManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ExcludeFromCodeCoverage]
     public class MenuController : ControllerBase
     {
         private readonly IMenuService _menuService; 

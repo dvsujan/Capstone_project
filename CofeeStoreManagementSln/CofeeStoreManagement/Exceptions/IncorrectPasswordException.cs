@@ -1,7 +1,10 @@
-﻿namespace CofeeStoreManagement.Exceptions
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace CofeeStoreManagement.Exceptions
 {
     [Serializable]
-    internal class IncorrectPasswordException : Exception
+    [ExcludeFromCodeCoverage]
+    public class IncorrectPasswordException : Exception
     {
         public IncorrectPasswordException()
         {

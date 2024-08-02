@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Client;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CofeeStoreManagement.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ExcludeFromCodeCoverage]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;

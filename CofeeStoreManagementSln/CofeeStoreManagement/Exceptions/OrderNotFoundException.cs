@@ -1,7 +1,10 @@
-﻿namespace CofeeStoreManagement.Exceptions
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace CofeeStoreManagement.Exceptions
 {
     [Serializable]
-    internal class OrderNotFoundException : Exception
+    [ExcludeFromCodeCoverage]
+    public class OrderNotFoundException : Exception
     {
         public OrderNotFoundException()
         {

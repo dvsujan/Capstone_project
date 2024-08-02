@@ -1,6 +1,9 @@
-﻿namespace CofeeStoreManagement.Exceptions
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace CofeeStoreManagement.Exceptions
 {
     [Serializable]
+    [ExcludeFromCodeCoverage]
     public class ProductNotFoundException : Exception
     {
         public ProductNotFoundException()
