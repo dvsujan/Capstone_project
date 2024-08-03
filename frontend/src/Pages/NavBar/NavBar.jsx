@@ -20,7 +20,7 @@ const NavBar = () => {
     else{
       setLoggedIn(false); 
       const path = (window.location.href.split('/'))[3]; 
-      const exceptPaths = ['login','register','employee', 'menu',''];
+      const exceptPaths = ['login','register','employee', 'menu','admin',''];
       if(!exceptPaths.includes(path)){
         window.location.href = '/login';
       }

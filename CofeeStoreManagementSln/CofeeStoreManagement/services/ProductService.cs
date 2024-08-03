@@ -32,6 +32,33 @@ namespace CofeeStoreManagement.services
             _productOptionValueRepository = productOptionValueRepository;
         }
 
+        public async Task<ProductDataDto> ArchiveProduct(int id)
+        {
+            try
+            { 
+                var product = await _productRepository.GetOneById(id);    
+                if (product.Archived == true)
+                {
+                    throw new ProductAlreadyArchivedException();  
+                }
+                product.Archived = true;
+                product = await _productRepository.Update(product);
+                return new ProductDataDto
+                {  
+                    ProductId = product.ProductId, 
+                    Name = product.Name,
+                    Description = product.Description , 
+                    Calories = product.Calories , 
+                    Cost = product.StarCost , 
+                    ImageUrl = product.ImageUri
+                }; 
+            }
+            catch
+            {
+                throw; 
+            }
+        }
+
         /// <summary>
         /// get all the product categories
         /// </summary>

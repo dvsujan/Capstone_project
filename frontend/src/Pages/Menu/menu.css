@@ -25,6 +25,15 @@
   border-radius: 0;
 }
 
+.menu-err{ 
+  position: absolute; 
+  top:50% ; 
+  left: 45% ;  
+  text-align: center; 
+  color: red;
+  font-weight: bold; 
+
+}
 .react-tabs__tab {
   padding: 10px;
   cursor: pointer;
@@ -44,6 +53,16 @@
 
 .category-name{ 
     margin-left: 50px;
+}
+
+.prod-del{ 
+  padding:7px 14px ; 
+  color:white ; 
+  background-color: red;
+  border-radius: 5px;
+  border: none; 
+  cursor: pointer;
+  margin-left: 35%;
 }
 
 @media (max-width: 768px) {
@@ -94,5 +113,8 @@
 
   .category-name {
     margin-left: 10px;
+  }
+  .prod-del{ 
+    margin-left: 20%;
   }
 }

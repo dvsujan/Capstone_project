@@ -12,7 +12,7 @@ const ProductCategory = (props) => {
         </div>
         <div className='category-products'>
         {props.category.products.map((product) => (
-            <ProductCard product={product} key={product.id}/>
+            <ProductCard product={product} key={product.id} admin={props.admin}/>
         ))}
         </div>
     </div>)

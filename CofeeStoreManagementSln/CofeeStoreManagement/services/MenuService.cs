@@ -47,21 +47,23 @@ namespace CofeeStoreManagement.services
                     {
                         Name = category.Name,
                         Products = productCategories.Where(pc => pc.CategoryId == category.CategoryId)
-                            .Join(products,
-                                pc => pc.ProductId,
-                                p => p.ProductId,
-                                (productCategory, product) => new ProductDataDto
-                                {
-                                    ProductId = product.ProductId,
-                                    Name = product.Name,
-                                    Description = product.Description,
-                                    Calories = product.Calories,
-                                    Cost = product.StarCost,
-                                    ImageUrl = product.ImageUri
-                                }).ToList()
-                    }).ToList()
+                .Join(products,
+                    pc => pc.ProductId,
+                    p => p.ProductId,
+                    (productCategory, product) => new { productCategory, product })
+                .Where(joined => !joined.product.Archived) 
+                .Select(joined => new ProductDataDto
+                {
+                    ProductId = joined.product.ProductId,
+                    Name = joined.product.Name,
+                    Description = joined.product.Description,
+                    Calories = joined.product.Calories,
+                    Cost = joined.product.StarCost,
+                    ImageUrl = joined.product.ImageUri
                 }).ToList()
-            };
+        }).ToList()
+    }).ToList()
+            }; 
             return menu;
         }
     }

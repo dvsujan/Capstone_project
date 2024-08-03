@@ -3,6 +3,7 @@ using CofeeStoreManagement.Interfaces;
 using CofeeStoreManagement.Models.DTO;
 using CofeeStoreManagement.Models.DTO.MenuDTO;
 using CofeeStoreManagement.Models.DTO.ProductDTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -118,6 +119,46 @@ namespace CofeeStoreManagement.Controllers
                 });
             }
         }
+
+        [HttpDelete]
+        [Route("archiveproduct")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Authorize(Roles ="Admin")]
+         public async Task<ActionResult<ProductDataDto>> ArchiveProduct(int id)
+        {
+            try
+            {
+                var res = await _productService.ArchiveProduct(id);
+                return res; 
+            }
+            catch (ProductAlreadyArchivedException)
+            {
+                _logger.LogError($"Product with id {id} Already Archived");
+                return StatusCode(StatusCodes.Status404NotFound, new ErrorDTO
+                {
+                    Message = "Product Already Archived"
+                });
+            }
+            catch (EntityNotFoundException)
+            {
+                _logger.LogError($"Product with id {id} not found");
+                return StatusCode(StatusCodes.Status404NotFound, new ErrorDTO
+                {
+                    Message = "Product not found"
+                });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                return StatusCode(StatusCodes.Status500InternalServerError, new ErrorDTO
+                {
+                    Message = ex.Message
+                });
+            }
+        }
+
 
     }
 }

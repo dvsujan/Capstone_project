@@ -79,7 +79,12 @@ namespace CofeeStoreManagement.services
         {
             try
             {
-                await _productRepository.GetOneById(productId);
+                var prod = await _productRepository.GetOneById(productId);
+                if (prod.Archived == true)
+                {
+                    throw new ProductArchivedException(); 
+                }
+
                 return true;
             }
             catch (EntityNotFoundException)

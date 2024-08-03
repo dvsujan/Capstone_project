@@ -4,7 +4,6 @@ import axios from 'axios';
 import StoreComponent from '../../Components/StoreComponent/StoreComponent';
 import toast , { Toaster } from 'react-hot-toast';
 
-
 const Store = () => { 
     const [userCity , setUserCity] = useState("India");    
     const [storesData , setStoresData] = useState([]);
@@ -40,7 +39,10 @@ const Store = () => {
     <div className='store-page'>   
         <div className="store-left"> 
     <input type="text" value={userCity} onChange={(e)=>{setUserCity(e.target.value)}}/>
-        <h1>Stores Near You</h1>
+        <h1>Stores Near You</h1> 
+            {
+                storesData.length == 0 && <p>Oops no stores in your area</p>
+            }
             {
                 storesData.map((store)=>{
                     return <StoreComponent key={store.storeId} storeData={store}/>

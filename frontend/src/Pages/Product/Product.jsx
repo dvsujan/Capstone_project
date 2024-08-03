@@ -18,7 +18,7 @@ const Product = () => {
   useEffect(() => {
     toast.promise(
       axios
-        .get(`${process.env.REACT_APP_API_ENDPOINT}/api/Product?id=${productId}`)
+        .get(`${process.env.REACT_APP_API}/api/Product?id=${productId}`)
         .then((response) => {
           setProduct(response.data);
         })
@@ -33,7 +33,7 @@ const Product = () => {
       }
     );
     axios
-      .get(`${process.env.REACT_APP_API_ENDPOINT}/api/Product/Options?id=${productId}`)
+      .get(`${process.env.REACT_APP_API}/api/Product/Options?id=${productId}`)
       .then((response) => {
         setOptions(response.data.categories[0].options);
       })
@@ -73,7 +73,7 @@ const Product = () => {
     };
 
     axios
-      .post(process.env.REACT_APP_API_ENDPOINT+"/api/Cart/Add", data, config)
+      .post(process.env.REACT_APP_API+"/api/Cart/Add", data, config)
       .then((response) => {
         if (response.status === 200) {
           toast.success("Item Added to Cart");

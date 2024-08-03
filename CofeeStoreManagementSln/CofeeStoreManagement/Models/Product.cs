@@ -11,9 +11,9 @@ namespace CofeeStoreManagement.Models
         public int Calories { get; set; }
         public int StarCost { get; set; }
         public string ImageUri { get; set; }
+        public bool Archived { get; set; } = false; 
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public ICollection<ProductCategory> ProductCategories { get; set; }
-
     }
 }

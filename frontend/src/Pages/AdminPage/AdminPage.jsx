@@ -45,7 +45,7 @@ const AdminPage = () => {
 
   useEffect(() => {
     if (localStorage.getItem("admin-token") == null) {
-      window.location.href = "admin/login";
+      window.location.href = "/admin/login";
     } else {
       isvalidAdmin();
     }

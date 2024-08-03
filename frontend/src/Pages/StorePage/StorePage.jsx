@@ -18,7 +18,8 @@ const StorePage = () => {
       headers: {
         Authorization: `Bearer ${token}`,
       },
-    };
+    }; 
+    toast.promise(
     axios
       .get(
         `${process.env.REACT_APP_API}/api/Store/orders?storeId=${storeId}`,
@@ -33,8 +34,16 @@ const StorePage = () => {
           response.data.filter((order) => order.status === "Accepted")
         );
       })
-      .catch((error) => {
-        toast.error(error.response.data.message);
+      .catch((error) => {  
+        if (error.code == "ERR_NETWORK") {
+          throw Error("Network Error Occured Try Again Later");
+          return;
+        }
+      })
+      ,{
+        loading: 'Fetching Orders',
+        success: 'Orders Fetched',
+        error: 'Error Fetching Orders',
       });
   };
   useEffect(() => {
@@ -50,7 +59,11 @@ const StorePage = () => {
       axios
         .get(process.env.REACT_APP_API + "/api/Employee/tst", { headers })
         .then((response) => {})
-        .catch((error) => {
+        .catch((error) => {  
+          if(error.code == "ERR_NETWORK"){ 
+            toast.error("Network Error Occured Try Again Later");
+            return ; 
+          }
           window.location.href = "/employee/login";
         });
     }
@@ -74,11 +87,14 @@ const StorePage = () => {
         config
       )
       .then(async (response) => {
-        console.log(response.data);
         await reFetchOrders();
         toast.success("Accepted Order");
       })
       .catch((error) => {
+        if (error.code == "ERR_NETWORK") {
+          toast.error("Network Error Occured Try Again Later");
+          return;
+        }
         toast.error(error.response.data.message);
       });
   };
@@ -147,7 +163,7 @@ const StorePage = () => {
             <h1>No Incoming Orders</h1>
           )}
           {incomingOrders &&
-            incomingOrders.map((order) => (
+            incomingOrders?.map((order) => (
               <OrderCard
                 key={order.orderId}
                 order={order}
@@ -170,7 +186,7 @@ const StorePage = () => {
             <h1>No Ongoing Orders</h1>
           )}
           {ongoingOrders &&
-            ongoingOrders.map((order) => (
+            ongoingOrders?.map((order) => (
               <OrderCard
                 key={order.orderId}
                 order={order}

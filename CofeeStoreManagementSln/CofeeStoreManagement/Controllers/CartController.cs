@@ -66,6 +66,15 @@ namespace CofeeStoreManagement.Controllers
                     Message = "Product Does Not Exist"
                 });
             }
+            catch (ProductArchivedException)
+            {
+                _logger.LogError($"userId: {userIdLogged} tryed to add archived prodcut id: {cartDto.ProductId} to the cart"); 
+                    return BadRequest(
+                       new ErrorDTO
+                       {
+                           Message = "Cannot Add to cart Product archived"
+                       }); 
+            }
             catch(EntityNotFoundException)
             {
                 _logger.LogError($"Product {cartDto.ProductId} does not exist");

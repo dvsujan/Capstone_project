@@ -15,7 +15,7 @@ const Orders = () => {
     const headers = {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
-    }; 
+    };
     toast.promise(
     axios
       .get(
@@ -26,14 +26,16 @@ const Orders = () => {
         setOrders(response.data);
       })
       .catch((error) => {
-        console.log(error);
-      })
-      ,{
-        loading: 'Loading orders...',
-        success: 'Orders Refreshed',
-        error: 'Failed to fetch orders',
-      }
-    ); 
+        if (error.code == "ERR_NETWORK") { 
+          throw Error("Network Error"); 
+          return;
+        }
+      }),
+      {
+        loading: "Loading Orders",
+        success: "Orders Loaded",
+        error: "Failed to load Orders",
+      }) ; 
   };
 
   useEffect(() => {
@@ -44,7 +46,9 @@ const Orders = () => {
   return (
     <div>
       <h1>Your Orders:</h1>
-      {orders && orders?.toReversed().map((order) => <OrderCard order={order} />)}
+      {orders && orders.length === 0 && <h3>No Orders</h3>}
+      {orders &&
+        orders?.toReversed().map((order) => <OrderCard order={order} />)}
       <Toaster />
     </div>
   );

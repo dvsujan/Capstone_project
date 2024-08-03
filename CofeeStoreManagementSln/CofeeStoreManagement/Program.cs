@@ -21,6 +21,7 @@ namespace CofeeStoreManagement
             builder.Logging.AddLog4Net(); 
 
 
+
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
              .AddJwtBearer(options =>
              {
@@ -65,7 +66,7 @@ namespace CofeeStoreManagement
             #region database_connection
             builder.Services.AddDbContext<CofeeStoreManagementContext>(options =>
             {
-                options.UseSqlServer("Data Source=794GBX3\\INSTANCE_1;Integrated Security=true;Initial Catalog=CofeeFirst; TrustServerCertificate=True");
+                options.UseSqlServer("Server=tcpD");
             });
             #endregion
 
@@ -100,7 +101,7 @@ namespace CofeeStoreManagement
             builder.Services.AddScoped<IAdminService, AdminService>();   
             builder.Services.AddScoped<IKeyVaultService, KeyVaultService>();
             #endregion
-
+            
 
             
 
